@@ -12,10 +12,14 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    private var _rootViewController = JXNavigationViewController(rootViewController:JXItemViewController())
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main().bounds)
+        window?.rootViewController = _rootViewController
+        window?.backgroundColor = UIColor.white()
+        window?.makeKeyAndVisible()
         return true
     }
 
