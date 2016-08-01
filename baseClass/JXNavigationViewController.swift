@@ -10,7 +10,7 @@ import UIKit
 
 class JXNavigationViewController: UINavigationController {
 
-    internal var statusBarStyle: UIStatusBarStyle = .default
+    var statusBarStyle: UIStatusBarStyle = .default
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,13 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40222CEB1D4E4A270012344B /* JXItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40222CEA1D4E4A270012344B /* JXItemViewController.swift */; };
-		4083E0071D4E4BF70009B036 /* JXNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4083E0061D4E4BF70009B036 /* JXNavigationViewController.swift */; };
 		84803F101D4B51540090C893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F0F1D4B51540090C893 /* AppDelegate.swift */; };
 		84803F171D4B51540090C893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84803F161D4B51540090C893 /* Assets.xcassets */; };
 		84803F1A1D4B51540090C893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84803F181D4B51540090C893 /* LaunchScreen.storyboard */; };
 		84803F251D4B51540090C893 /* passwordManagementTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F241D4B51540090C893 /* passwordManagementTests.swift */; };
 		84803F301D4B51540090C893 /* passwordManagementUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F2F1D4B51540090C893 /* passwordManagementUITests.swift */; };
+		84803F461D4EE7180090C893 /* JXNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F451D4EE7180090C893 /* JXNavigationViewController.swift */; };
+		84803F471D4EE7180090C893 /* JXNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F451D4EE7180090C893 /* JXNavigationViewController.swift */; };
+		84803F481D4EE7180090C893 /* JXNavigationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F451D4EE7180090C893 /* JXNavigationViewController.swift */; };
+		84803F4C1D4EE74C0090C893 /* JXItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */; };
+		84803F4D1D4EE74C0090C893 /* JXItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */; };
+		84803F4E1D4EE74C0090C893 /* JXItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */; };
+		84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
+		84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
+		84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,8 +41,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40222CEA1D4E4A270012344B /* JXItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXItemViewController.swift; sourceTree = "<group>"; };
-		4083E0061D4E4BF70009B036 /* JXNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXNavigationViewController.swift; sourceTree = "<group>"; };
 		84803F0C1D4B51540090C893 /* passwordManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwordManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84803F0F1D4B51540090C893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84803F161D4B51540090C893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -47,6 +52,9 @@
 		84803F2B1D4B51540090C893 /* passwordManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = passwordManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		84803F2F1D4B51540090C893 /* passwordManagementUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = passwordManagementUITests.swift; sourceTree = "<group>"; };
 		84803F311D4B51540090C893 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84803F451D4EE7180090C893 /* JXNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXNavigationViewController.swift; sourceTree = "<group>"; };
+		84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXItemViewController.swift; sourceTree = "<group>"; };
+		84803F511D4EE8250090C893 /* JXViewConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewConfigure.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +85,10 @@
 		84803F031D4B51540090C893 = {
 			isa = PBXGroup;
 			children = (
+				84803F411D4EE6E00090C893 /* baseClass */,
+				84803F421D4EE6E00090C893 /* extension */,
+				84803F431D4EE6E00090C893 /* main */,
+				84803F441D4EE6E00090C893 /* tools */,
 				84803F0E1D4B51540090C893 /* passwordManagement */,
 				84803F231D4B51540090C893 /* passwordManagementTests */,
 				84803F2E1D4B51540090C893 /* passwordManagementUITests */,
@@ -98,8 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				84803F0F1D4B51540090C893 /* AppDelegate.swift */,
-				4083E0061D4E4BF70009B036 /* JXNavigationViewController.swift */,
-				40222CEA1D4E4A270012344B /* JXItemViewController.swift */,
 				84803F161D4B51540090C893 /* Assets.xcassets */,
 				84803F181D4B51540090C893 /* LaunchScreen.storyboard */,
 				84803F1B1D4B51540090C893 /* Info.plist */,
@@ -123,6 +133,61 @@
 				84803F311D4B51540090C893 /* Info.plist */,
 			);
 			path = passwordManagementUITests;
+			sourceTree = "<group>";
+		};
+		84803F411D4EE6E00090C893 /* baseClass */ = {
+			isa = PBXGroup;
+			children = (
+				84803F451D4EE7180090C893 /* JXNavigationViewController.swift */,
+			);
+			path = baseClass;
+			sourceTree = "<group>";
+		};
+		84803F421D4EE6E00090C893 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				84803F4F1D4EE7A70090C893 /* UIButton */,
+				84803F501D4EE7A70090C893 /* UIView */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		84803F431D4EE6E00090C893 /* main */ = {
+			isa = PBXGroup;
+			children = (
+				84803F4A1D4EE7450090C893 /* itemView */,
+			);
+			path = main;
+			sourceTree = "<group>";
+		};
+		84803F441D4EE6E00090C893 /* tools */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = tools;
+			sourceTree = "<group>";
+		};
+		84803F4A1D4EE7450090C893 /* itemView */ = {
+			isa = PBXGroup;
+			children = (
+				84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */,
+			);
+			path = itemView;
+			sourceTree = "<group>";
+		};
+		84803F4F1D4EE7A70090C893 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		84803F501D4EE7A70090C893 /* UIView */ = {
+			isa = PBXGroup;
+			children = (
+				84803F511D4EE8250090C893 /* JXViewConfigure.swift */,
+			);
+			path = UIView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,9 +330,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84803F461D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				84803F4C1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84803F101D4B51540090C893 /* AppDelegate.swift in Sources */,
-				40222CEB1D4E4A270012344B /* JXItemViewController.swift in Sources */,
-				4083E0071D4E4BF70009B036 /* JXNavigationViewController.swift in Sources */,
+				84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +341,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84803F471D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				84803F4D1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84803F251D4B51540090C893 /* passwordManagementTests.swift in Sources */,
+				84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -283,7 +352,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84803F481D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				84803F4E1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84803F301D4B51540090C893 /* passwordManagementUITests.swift in Sources */,
+				84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -407,7 +479,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = passwordManagement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -422,7 +494,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = passwordManagement/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
