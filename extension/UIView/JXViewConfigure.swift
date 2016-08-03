@@ -15,6 +15,15 @@ extension UIView {
         closure(self)
     }
     
+    func fullLayout() {
+        self.layout {
+            $0.topAnchor.constraint(equalTo: $0.superview!.topAnchor).activeTrue()
+            $0.leftAnchor.constraint(equalTo: $0.superview!.leftAnchor).activeTrue()
+            $0.rightAnchor.constraint(equalTo: $0.superview!.rightAnchor).activeTrue()
+            $0.bottomAnchor.constraint(equalTo: $0.superview!.bottomAnchor).activeTrue()
+        }
+    }
+    
 }
 
 extension NSLayoutConstraint {

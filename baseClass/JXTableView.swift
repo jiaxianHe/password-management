@@ -15,10 +15,10 @@ class JXTableView: UITableView {
         self.separatorStyle = .none;
         self.showsHorizontalScrollIndicator = false
         self.showsVerticalScrollIndicator = false
-        self.backgroundColor = UIColor.color(withHexString: "#efeff4")
+        self.backgroundColor = UIColor.color(withHexString: JXBackgroundColor)
     }
     
-    func setDelegate(_ delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
+    func set(delegate: UITableViewDelegate, dataSource: UITableViewDataSource) {
         self.delegate = delegate
         self.dataSource = dataSource
     }
@@ -32,4 +32,11 @@ class JXTableView: UITableView {
         debugLog("deinit------" + className)
     }
 
+}
+
+protocol JXTableViewActionDelegate {
+    
+    func tableView(_ tableView: JXTableView, didSelectRowAt indexPath: IndexPath)
+    
+    func tableView(_ tableView: JXTableView, didSelectRowAt indexPath: IndexPath, action: Any)
 }

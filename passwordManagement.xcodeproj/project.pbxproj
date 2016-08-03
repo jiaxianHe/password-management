@@ -30,6 +30,12 @@
 		84D6CACC1D518D69004AA64A /* JXTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACB1D518D69004AA64A /* JXTableView.swift */; };
 		84D6CACD1D518D69004AA64A /* JXTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACB1D518D69004AA64A /* JXTableView.swift */; };
 		84D6CACE1D518D69004AA64A /* JXTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACB1D518D69004AA64A /* JXTableView.swift */; };
+		84D6CAD01D518F12004AA64A /* JXItemTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACF1D518F12004AA64A /* JXItemTableView.swift */; };
+		84D6CAD11D518F12004AA64A /* JXItemTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACF1D518F12004AA64A /* JXItemTableView.swift */; };
+		84D6CAD21D518F12004AA64A /* JXItemTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACF1D518F12004AA64A /* JXItemTableView.swift */; };
+		84D6CAD41D51A2AB004AA64A /* JXLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAD31D51A2AB004AA64A /* JXLineView.swift */; };
+		84D6CAD51D51A2AB004AA64A /* JXLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAD31D51A2AB004AA64A /* JXLineView.swift */; };
+		84D6CAD61D51A2AB004AA64A /* JXLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAD31D51A2AB004AA64A /* JXLineView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +73,8 @@
 		84D6CAC31D5187A1004AA64A /* JXUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUtility.swift; sourceTree = "<group>"; };
 		84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXConfigureFile.swift; sourceTree = "<group>"; };
 		84D6CACB1D518D69004AA64A /* JXTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXTableView.swift; sourceTree = "<group>"; };
+		84D6CACF1D518F12004AA64A /* JXItemTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXItemTableView.swift; sourceTree = "<group>"; };
+		84D6CAD31D51A2AB004AA64A /* JXLineView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXLineView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */,
+				84D6CACF1D518F12004AA64A /* JXItemTableView.swift */,
 			);
 			path = itemView;
 			sourceTree = "<group>";
@@ -201,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				84803F511D4EE8250090C893 /* JXViewConfigure.swift */,
+				84D6CAD31D51A2AB004AA64A /* JXLineView.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -349,6 +359,8 @@
 				84D6CACC1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4C1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CAC81D518D05004AA64A /* JXConfigureFile.swift in Sources */,
+				84D6CAD01D518F12004AA64A /* JXItemTableView.swift in Sources */,
+				84D6CAD41D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				84803F101D4B51540090C893 /* AppDelegate.swift in Sources */,
 				84D6CAC41D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
@@ -363,6 +375,8 @@
 				84D6CACD1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4D1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CAC91D518D05004AA64A /* JXConfigureFile.swift in Sources */,
+				84D6CAD11D518F12004AA64A /* JXItemTableView.swift in Sources */,
+				84D6CAD51D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				84803F251D4B51540090C893 /* passwordManagementTests.swift in Sources */,
 				84D6CAC51D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
@@ -377,6 +391,8 @@
 				84D6CACE1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4E1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CACA1D518D05004AA64A /* JXConfigureFile.swift in Sources */,
+				84D6CAD21D518F12004AA64A /* JXItemTableView.swift in Sources */,
+				84D6CAD61D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				84803F301D4B51540090C893 /* passwordManagementUITests.swift in Sources */,
 				84D6CAC61D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */,

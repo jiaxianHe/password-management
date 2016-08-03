@@ -37,9 +37,7 @@ class DateFormatter: Foundation.DateFormatter {
 }
 //MARK: - UIColor16进制
 extension UIColor {
-    
     class func color(withHexString string: String, alpha: CGFloat) -> UIColor {
-//        var cString = string.trimmingCharacters(NSCharacterSet.whitespaceAndNewlineCharacterSet()).uppercased()
         var cString = string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
         guard cString.characters.count >= 6 else {
             return UIColor.clear()
@@ -53,8 +51,7 @@ extension UIColor {
         guard cString.characters.count == 6 else {
             return UIColor.clear()
         }
-        
-        //        var range = Range.init(start: cString.startIndex.advancedBy(0), end: cString.startIndex.advancedBy(2))
+
         var range = cString.index(cString.startIndex, offsetBy: 0) ..< cString.index(cString.startIndex, offsetBy: 2)
         let rString = cString.substring(with: range)
         range = cString.index(cString.startIndex, offsetBy: 2) ..< cString.index(cString.startIndex, offsetBy: 4)
