@@ -21,6 +21,15 @@
 		84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
 		84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
 		84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
+		84D6CAC41D5187A1004AA64A /* JXUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC31D5187A1004AA64A /* JXUtility.swift */; };
+		84D6CAC51D5187A1004AA64A /* JXUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC31D5187A1004AA64A /* JXUtility.swift */; };
+		84D6CAC61D5187A1004AA64A /* JXUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC31D5187A1004AA64A /* JXUtility.swift */; };
+		84D6CAC81D518D05004AA64A /* JXConfigureFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */; };
+		84D6CAC91D518D05004AA64A /* JXConfigureFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */; };
+		84D6CACA1D518D05004AA64A /* JXConfigureFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */; };
+		84D6CACC1D518D69004AA64A /* JXTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACB1D518D69004AA64A /* JXTableView.swift */; };
+		84D6CACD1D518D69004AA64A /* JXTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACB1D518D69004AA64A /* JXTableView.swift */; };
+		84D6CACE1D518D69004AA64A /* JXTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CACB1D518D69004AA64A /* JXTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +64,9 @@
 		84803F451D4EE7180090C893 /* JXNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXNavigationViewController.swift; sourceTree = "<group>"; };
 		84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXItemViewController.swift; sourceTree = "<group>"; };
 		84803F511D4EE8250090C893 /* JXViewConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewConfigure.swift; sourceTree = "<group>"; };
+		84D6CAC31D5187A1004AA64A /* JXUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUtility.swift; sourceTree = "<group>"; };
+		84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXConfigureFile.swift; sourceTree = "<group>"; };
+		84D6CACB1D518D69004AA64A /* JXTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXTableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +151,7 @@
 			isa = PBXGroup;
 			children = (
 				84803F451D4EE7180090C893 /* JXNavigationViewController.swift */,
+				84D6CACB1D518D69004AA64A /* JXTableView.swift */,
 			);
 			path = baseClass;
 			sourceTree = "<group>";
@@ -163,6 +176,8 @@
 		84803F441D4EE6E00090C893 /* tools */ = {
 			isa = PBXGroup;
 			children = (
+				84D6CAC31D5187A1004AA64A /* JXUtility.swift */,
+				84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -331,8 +346,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84803F461D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				84D6CACC1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4C1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
+				84D6CAC81D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84803F101D4B51540090C893 /* AppDelegate.swift in Sources */,
+				84D6CAC41D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,8 +360,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84803F471D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				84D6CACD1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4D1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
+				84D6CAC91D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84803F251D4B51540090C893 /* passwordManagementTests.swift in Sources */,
+				84D6CAC51D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -353,8 +374,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				84803F481D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				84D6CACE1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4E1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
+				84D6CACA1D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84803F301D4B51540090C893 /* passwordManagementUITests.swift in Sources */,
+				84D6CAC61D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
