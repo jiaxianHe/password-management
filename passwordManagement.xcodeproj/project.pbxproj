@@ -21,6 +21,12 @@
 		84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
 		84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
 		84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
+		84983B321D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
+		84983B331D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
+		84983B341D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
+		84983B361D533E7B002480F4 /* JXKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B351D533E7B002480F4 /* JXKeychain.swift */; };
+		84983B371D533E7B002480F4 /* JXKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B351D533E7B002480F4 /* JXKeychain.swift */; };
+		84983B381D533E7B002480F4 /* JXKeychain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B351D533E7B002480F4 /* JXKeychain.swift */; };
 		84D6CAC41D5187A1004AA64A /* JXUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC31D5187A1004AA64A /* JXUtility.swift */; };
 		84D6CAC51D5187A1004AA64A /* JXUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC31D5187A1004AA64A /* JXUtility.swift */; };
 		84D6CAC61D5187A1004AA64A /* JXUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84D6CAC31D5187A1004AA64A /* JXUtility.swift */; };
@@ -70,6 +76,8 @@
 		84803F451D4EE7180090C893 /* JXNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXNavigationViewController.swift; sourceTree = "<group>"; };
 		84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXItemViewController.swift; sourceTree = "<group>"; };
 		84803F511D4EE8250090C893 /* JXViewConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewConfigure.swift; sourceTree = "<group>"; };
+		84983B311D533812002480F4 /* JXUserConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUserConfiguration.swift; sourceTree = "<group>"; };
+		84983B351D533E7B002480F4 /* JXKeychain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXKeychain.swift; sourceTree = "<group>"; };
 		84D6CAC31D5187A1004AA64A /* JXUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUtility.swift; sourceTree = "<group>"; };
 		84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXConfigureFile.swift; sourceTree = "<group>"; };
 		84D6CACB1D518D69004AA64A /* JXTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXTableView.swift; sourceTree = "<group>"; };
@@ -130,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				84803F0F1D4B51540090C893 /* AppDelegate.swift */,
+				84983B311D533812002480F4 /* JXUserConfiguration.swift */,
 				84803F161D4B51540090C893 /* Assets.xcassets */,
 				84803F181D4B51540090C893 /* LaunchScreen.storyboard */,
 				84803F1B1D4B51540090C893 /* Info.plist */,
@@ -186,6 +195,7 @@
 			children = (
 				84D6CAC31D5187A1004AA64A /* JXUtility.swift */,
 				84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */,
+				84983B351D533E7B002480F4 /* JXKeychain.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -362,6 +372,8 @@
 				84D6CAD01D518F12004AA64A /* JXItemTableView.swift in Sources */,
 				84D6CAD41D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				84803F101D4B51540090C893 /* AppDelegate.swift in Sources */,
+				84983B361D533E7B002480F4 /* JXKeychain.swift in Sources */,
+				84983B321D533812002480F4 /* JXUserConfiguration.swift in Sources */,
 				84D6CAC41D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
@@ -378,6 +390,8 @@
 				84D6CAD11D518F12004AA64A /* JXItemTableView.swift in Sources */,
 				84D6CAD51D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				84803F251D4B51540090C893 /* passwordManagementTests.swift in Sources */,
+				84983B371D533E7B002480F4 /* JXKeychain.swift in Sources */,
+				84983B331D533812002480F4 /* JXUserConfiguration.swift in Sources */,
 				84D6CAC51D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);
@@ -394,6 +408,8 @@
 				84D6CAD21D518F12004AA64A /* JXItemTableView.swift in Sources */,
 				84D6CAD61D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				84803F301D4B51540090C893 /* passwordManagementUITests.swift in Sources */,
+				84983B381D533E7B002480F4 /* JXKeychain.swift in Sources */,
+				84983B341D533812002480F4 /* JXUserConfiguration.swift in Sources */,
 				84D6CAC61D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
 			);

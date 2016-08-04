@@ -10,6 +10,8 @@ import UIKit
 
 class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
 
+    var didSelectRow: ((UITableView,IndexPath) -> Void)?
+    
     convenience init() {
         self.init(style: .plain)
         self.set(delegate: self, dataSource: self)
@@ -32,7 +34,9 @@ class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        <#code#>
+        if let value = didSelectRow {
+            value(tableView, indexPath)
+        }
     }
 
 }

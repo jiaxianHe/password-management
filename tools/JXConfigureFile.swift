@@ -10,7 +10,6 @@ import UIKit
 
 let screenWidth = UIScreen.main().bounds.size.width
 let screenHeight = UIScreen.main().bounds.size.height
-let pictureWidth = screenWidth < 375 ? 320 : (screenWidth < 414 ? 375 : 414)
 let scaleScreen = UIScreen.main().scale
 let onePixel = (1 / scaleScreen)
 
@@ -19,3 +18,5 @@ let JXSystemVersion = UIDevice.current().systemVersion
 
 let JXBackgroundColor = "#efeff4"
 let JXLineColor = "#dcdcdc"
+
+let JXItemKeychainKey = "cn.lvstudent.passwordManagement.key"

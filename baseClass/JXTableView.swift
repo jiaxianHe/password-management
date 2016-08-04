@@ -9,7 +9,7 @@
 import UIKit
 
 class JXTableView: UITableView {
-
+    
     init(style: UITableViewStyle) {
         super.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0), style: style)
         self.separatorStyle = .none;
@@ -32,11 +32,4 @@ class JXTableView: UITableView {
         debugLog("deinit------" + className)
     }
 
-}
-
-protocol JXTableViewActionDelegate {
-    
-    func tableView(_ tableView: JXTableView, didSelectRowAt indexPath: IndexPath)
-    
-    func tableView(_ tableView: JXTableView, didSelectRowAt indexPath: IndexPath, action: Any)
 }
