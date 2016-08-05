@@ -10,10 +10,13 @@ import UIKit
 
 class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
 
-    var didSelectRow: ((UITableView,IndexPath) -> Void)?
+    var didSelectRow: ((JXItemTableView, IndexPath) -> Void)?
+    var deleteRow: ((JXItemTableView, IndexPath) -> Void)?
+    var data: Array<(String, String)>!
     
-    convenience init() {
+    convenience init(data: Array<(String, String)>) {
         self.init(style: .plain)
+        self.data = data
         self.set(delegate: self, dataSource: self)
         self.rowHeight = 44
     }
@@ -25,21 +28,35 @@ class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
             cell = UITableViewCell(style: .default, reuseIdentifier: identifier)
             UIView.createHorizontalLine(supperView: cell!.contentView, left: 15, right: 0, isTop: (false, 0))
         }
-        cell?.textLabel?.text = "abc"
+        cell?.textLabel?.text = data[indexPath.row].0
         return cell!
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return data.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
         if let value = didSelectRow {
-            value(tableView, indexPath)
+            value(tableView as! JXItemTableView, indexPath)
         }
     }
 
 }
+
+//MARK: - edit
+extension JXItemTableView {
+    @objc(tableView:editActionsForRowAtIndexPath:) func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let action = UITableViewRowAction(style: .default, title: "删除") { [weak self] (action, indexPath) in
+            if let value = self!.deleteRow {
+                value(tableView as! JXItemTableView, indexPath)
+            }
+        }
+        return [action]
+    }
+}
+
 //MARK: - headerAndFooter
 extension JXItemTableView {
     
