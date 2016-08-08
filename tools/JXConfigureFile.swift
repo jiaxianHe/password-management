@@ -8,6 +8,8 @@
 
 import UIKit
 
+let JXAppDelegate = UIApplication.shared().delegate as! AppDelegate
+
 let screenWidth = UIScreen.main().bounds.size.width
 let screenHeight = UIScreen.main().bounds.size.height
 let scaleScreen = UIScreen.main().scale

@@ -20,12 +20,12 @@ class JXItemViewController: UIViewController {
         addTableView()
     }
     
-    func tableView(_ tableView: JXItemTableView, didSelectRowAt indexPath: IndexPath) {
+    private func tableView(_ tableView: JXItemTableView, didSelectRowAt indexPath: IndexPath) {
         selectedRow = indexPath[1]
         showAlertView()
     }
     
-    func tableView(_ tableView: JXItemTableView, deleteRowAt indexPath: IndexPath) {
+    private func tableView(_ tableView: JXItemTableView, deleteRowAt indexPath: IndexPath) {
         data.remove(at: indexPath.row)
         tableView.data = data
         tableView.deleteRows(at: [indexPath], with: .bottom)
@@ -35,7 +35,7 @@ class JXItemViewController: UIViewController {
 
 //MARK: - selectAction
 extension JXItemViewController {
-    func showAlertView() {
+    private func showAlertView() {
         let alertView = UIAlertController(title: "请选择", message: nil, preferredStyle: .alert)
         let singleShowAction = UIAlertAction(title: "显示一个", style: .default) {
             [weak self] action in
@@ -56,19 +56,19 @@ extension JXItemViewController {
         self.present(alertView, animated: true, completion: nil)
     }
     
-    func singleSelectAction() {
+    private func singleSelectAction() {
         if isNeedToProtect() {
             self.present(JXProtectViewController(), animated: true, completion: nil)
         }
     }
     
-    func selectListAction() {
+    private func selectListAction() {
         if isNeedToProtect() {
             
         }
     }
     
-    func editAction() {
+    private func editAction() {
         
     }
 }

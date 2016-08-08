@@ -24,6 +24,19 @@ extension UIView {
         }
     }
     
+    func layoutOnCenter() {
+        if let _superview = self.superview {
+            self.centerXAnchor.constraint(equalTo: _superview.centerXAnchor).activeTrue()
+            self.centerYAnchor.constraint(equalTo: _superview.centerYAnchor).activeTrue()
+        }
+        
+    }
+    
+    func layoutSize(size: CGSize) {
+        self.widthAnchor.constraint(equalToConstant: size.width).activeTrue()
+        self.heightAnchor.constraint(equalToConstant: size.height).activeTrue()
+    }
+    
 }
 
 extension NSLayoutConstraint {

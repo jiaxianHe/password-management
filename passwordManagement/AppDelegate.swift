@@ -7,10 +7,24 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    private var _isCanUseFingerprint = false
+    private var judgeCanUseFingerprint = false
+    var isCanUseFingerprint: Bool {
+        get {
+            if !judgeCanUseFingerprint {
+                var error: NSError?
+                _isCanUseFingerprint = LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+                judgeCanUseFingerprint = true
+            }
+            return _isCanUseFingerprint
+        }
+    }
+    
     var window: UIWindow?
     private var _rootViewController = JXNavigationViewController(rootViewController:JXItemViewController())
 
