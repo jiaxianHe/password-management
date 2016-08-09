@@ -39,6 +39,12 @@
 		84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
 		84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
 		84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F511D4EE8250090C893 /* JXViewConfigure.swift */; };
+		848E7BCA1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BC91D59AA8600DE53A7 /* JXViewControllerConvenient.swift */; };
+		848E7BCB1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BC91D59AA8600DE53A7 /* JXViewControllerConvenient.swift */; };
+		848E7BCC1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BC91D59AA8600DE53A7 /* JXViewControllerConvenient.swift */; };
+		848E7BCE1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */; };
+		848E7BCF1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */; };
+		848E7BD01D59CE3F00DE53A7 /* JXCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */; };
 		84983B321D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
 		84983B331D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
 		84983B341D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
@@ -97,6 +103,8 @@
 		84803F451D4EE7180090C893 /* JXNavigationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXNavigationViewController.swift; sourceTree = "<group>"; };
 		84803F4B1D4EE74C0090C893 /* JXItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXItemViewController.swift; sourceTree = "<group>"; };
 		84803F511D4EE8250090C893 /* JXViewConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewConfigure.swift; sourceTree = "<group>"; };
+		848E7BC91D59AA8600DE53A7 /* JXViewControllerConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewControllerConvenient.swift; sourceTree = "<group>"; };
+		848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXCircleView.swift; sourceTree = "<group>"; };
 		84983B311D533812002480F4 /* JXUserConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUserConfiguration.swift; sourceTree = "<group>"; };
 		84D6CAC31D5187A1004AA64A /* JXUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUtility.swift; sourceTree = "<group>"; };
 		84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXConfigureFile.swift; sourceTree = "<group>"; };
@@ -145,6 +153,7 @@
 			children = (
 				8475BCAE1D5486B80053FDE2 /* JXProtectViewController.swift */,
 				8475BCB21D5487560053FDE2 /* JXProtectView.swift */,
+				848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */,
 			);
 			path = protectView;
 			sourceTree = "<group>";
@@ -216,6 +225,7 @@
 		84803F421D4EE6E00090C893 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				848E7BC81D59AA6200DE53A7 /* UIViewController */,
 				84803F4F1D4EE7A70090C893 /* UIButton */,
 				84803F501D4EE7A70090C893 /* UIView */,
 			);
@@ -264,6 +274,14 @@
 				84D6CAD31D51A2AB004AA64A /* JXLineView.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		848E7BC81D59AA6200DE53A7 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				848E7BC91D59AA8600DE53A7 /* JXViewControllerConvenient.swift */,
+			);
+			path = UIViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -408,6 +426,8 @@
 			files = (
 				84803F461D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
 				84551D2D1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
+				848E7BCE1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
+				848E7BCA1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */,
 				84D6CACC1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4C1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CAC81D518D05004AA64A /* JXConfigureFile.swift in Sources */,
@@ -431,6 +451,8 @@
 			files = (
 				84803F471D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
 				84551D2E1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
+				848E7BCF1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
+				848E7BCB1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */,
 				84D6CACD1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4D1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CAC91D518D05004AA64A /* JXConfigureFile.swift in Sources */,
@@ -454,6 +476,8 @@
 			files = (
 				84803F481D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
 				84551D2F1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
+				848E7BD01D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
+				848E7BCC1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */,
 				84D6CACE1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4E1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CACA1D518D05004AA64A /* JXConfigureFile.swift in Sources */,
@@ -590,7 +614,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = passwordManagement/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -606,7 +631,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = passwordManagement/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

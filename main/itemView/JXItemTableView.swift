@@ -38,8 +38,8 @@ class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: false)
-        if let value = didSelectRow {
-            value(tableView as! JXItemTableView, indexPath)
+        if let _didSelectRow = didSelectRow {
+            _didSelectRow(tableView as! JXItemTableView, indexPath)
         }
     }
 
@@ -49,8 +49,8 @@ class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
 extension JXItemTableView {
     @objc(tableView:editActionsForRowAtIndexPath:) func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
         let action = UITableViewRowAction(style: .default, title: "删除") { [weak self] (action, indexPath) in
-            if let value = self!.deleteRow {
-                value(tableView as! JXItemTableView, indexPath)
+            if let _deleteRow = self!.deleteRow {
+                _deleteRow(tableView as! JXItemTableView, indexPath)
             }
         }
         return [action]

@@ -57,14 +57,14 @@ extension JXItemViewController {
     }
     
     private func singleSelectAction() {
-        if isNeedToProtect() {
+        if isNeedToProtect {
             self.present(JXProtectViewController(), animated: true, completion: nil)
         }
     }
     
     private func selectListAction() {
-        if isNeedToProtect() {
-            
+        if isNeedToProtect {
+            self.present(JXProtectViewController(), animated: true, completion: nil)
         }
     }
     

@@ -12,16 +12,14 @@ import LocalAuthentication
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-    private var _isCanUseFingerprint = false
-    private var judgeCanUseFingerprint = false
     var isCanUseFingerprint: Bool {
         get {
-            if !judgeCanUseFingerprint {
-                var error: NSError?
-                _isCanUseFingerprint = LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
-                judgeCanUseFingerprint = true
+            var error: NSError?
+            let verification = LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+            if !verification && error?.code == LAError.touchIDNotAvailable.rawValue {
+                return false
             }
-            return _isCanUseFingerprint
+            return true
         }
     }
     

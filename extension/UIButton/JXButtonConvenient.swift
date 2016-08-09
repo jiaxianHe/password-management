@@ -10,7 +10,7 @@ import UIKit
 
 extension UIButton {
     
-    class func convenient(withTitle title: String?, normalColor: UIColor?, highlightedColor: UIColor?, font: Float?, action: Selector?, target: AnyObject?, tag: Int?) -> UIButton {
+    class func convenient(title: String?, normalColor: UIColor?, highlightedColor: UIColor?, font: Float?, action: Selector?, target: AnyObject?, tag: Int?) -> UIButton {
         let button = UIButton(type: .custom)
         button.setTitle(title, for: UIControlState())
         if let titleFont = font {
@@ -23,7 +23,7 @@ extension UIButton {
         return button
     }
     
-    class func convenient(withNormalImage normalImage: UIImage?, highlightedImage: UIImage?, action: Selector?, target: AnyObject?, tag: Int) -> UIButton {
+    class func convenient(normalImage: UIImage?, highlightedImage: UIImage?, action: Selector?, target: AnyObject?, tag: Int) -> UIButton {
         let button = UIButton(type: .custom)
         button .setImage(normalImage, for: UIControlState())
         button.setImage(highlightedImage, for: .highlighted)
@@ -31,8 +31,8 @@ extension UIButton {
         return button
     }
     
-    class func convenient(withTitle title: String?, normalColor: UIColor?, highlightedColor: UIColor?, font: Float?, normalImage: UIImage?, highlightedImage: UIImage?, action: Selector?, target: AnyObject?, tag: Int?) -> UIButton {
-        let button = UIButton.convenient(withTitle: title, normalColor: normalColor, highlightedColor: highlightedColor, font: font, action: action, target: target, tag: tag)
+    class func convenient(title: String?, normalColor: UIColor?, highlightedColor: UIColor?, font: Float?, normalImage: UIImage?, highlightedImage: UIImage?, action: Selector?, target: AnyObject?, tag: Int?) -> UIButton {
+        let button = UIButton.convenient(title: title, normalColor: normalColor, highlightedColor: highlightedColor, font: font, action: action, target: target, tag: tag)
         button .setImage(normalImage, for: UIControlState())
         button.setImage(highlightedImage, for: .highlighted)
         return button

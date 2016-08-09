@@ -8,6 +8,4 @@
 
 import Foundation
 
-func isNeedToProtect() -> Bool {
-    return true
-}
+var isNeedToProtect = true
