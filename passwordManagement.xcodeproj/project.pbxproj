@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		842DB7D91D5B125C0063AE50 /* JXStringCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB7D81D5B125C0063AE50 /* JXStringCode.swift */; };
+		842DB7DA1D5B125C0063AE50 /* JXStringCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB7D81D5B125C0063AE50 /* JXStringCode.swift */; };
+		842DB7DB1D5B125C0063AE50 /* JXStringCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB7D81D5B125C0063AE50 /* JXStringCode.swift */; };
 		84551D2A1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */; };
 		84551D2B1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */; };
 		84551D2C1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */; };
@@ -86,6 +89,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		842DB7D81D5B125C0063AE50 /* JXStringCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXStringCode.swift; sourceTree = "<group>"; };
+		842DB7DC1D5B162B0063AE50 /* passwordManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passwordManagement-Bridging-Header.h"; sourceTree = "<group>"; };
+		842DB7DD1D5B162B0063AE50 /* passwordManagementTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passwordManagementTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		842DB7DE1D5B162B0063AE50 /* passwordManagementUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passwordManagementUITests-Bridging-Header.h"; sourceTree = "<group>"; };
 		84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		84551D251D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		84551D261D585FDD00EF7AA5 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegKeychainConstants.swift; sourceTree = "<group>"; };
@@ -142,6 +149,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842DB7D71D5B12430063AE50 /* String */ = {
+			isa = PBXGroup;
+			children = (
+				842DB7D81D5B125C0063AE50 /* JXStringCode.swift */,
+				842DB7DC1D5B162B0063AE50 /* passwordManagement-Bridging-Header.h */,
+				842DB7DD1D5B162B0063AE50 /* passwordManagementTests-Bridging-Header.h */,
+				842DB7DE1D5B162B0063AE50 /* passwordManagementUITests-Bridging-Header.h */,
+			);
+			path = String;
+			sourceTree = "<group>";
+		};
 		84551D211D585FDD00EF7AA5 /* KeychainSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +247,7 @@
 		84803F421D4EE6E00090C893 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				842DB7D71D5B12430063AE50 /* String */,
 				848E7BD11D5AD68E00DE53A7 /* UILabel */,
 				848E7BC81D59AA6200DE53A7 /* UIViewController */,
 				84803F4F1D4EE7A70090C893 /* UIButton */,
@@ -374,6 +393,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = V4X946G945;
 						DevelopmentTeamName = "家贤 何 (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84803F0B1D4B51540090C893;
 					};
@@ -381,6 +401,7 @@
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = V4X946G945;
 						DevelopmentTeamName = "家贤 何 (Personal Team)";
+						LastSwiftMigration = 0800;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 84803F0B1D4B51540090C893;
 					};
@@ -446,6 +467,7 @@
 				84803F4C1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CAC81D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84D6CAD01D518F12004AA64A /* JXItemTableView.swift in Sources */,
+				842DB7D91D5B125C0063AE50 /* JXStringCode.swift in Sources */,
 				84D6CAD41D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				8475BCAF1D5486B80053FDE2 /* JXProtectViewController.swift in Sources */,
 				8475BCB31D5487560053FDE2 /* JXProtectView.swift in Sources */,
@@ -472,6 +494,7 @@
 				84803F4D1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CAC91D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84D6CAD11D518F12004AA64A /* JXItemTableView.swift in Sources */,
+				842DB7DA1D5B125C0063AE50 /* JXStringCode.swift in Sources */,
 				84D6CAD51D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				8475BCB01D5486B80053FDE2 /* JXProtectViewController.swift in Sources */,
 				8475BCB41D5487560053FDE2 /* JXProtectView.swift in Sources */,
@@ -498,6 +521,7 @@
 				84803F4E1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
 				84D6CACA1D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84D6CAD21D518F12004AA64A /* JXItemTableView.swift in Sources */,
+				842DB7DB1D5B125C0063AE50 /* JXStringCode.swift in Sources */,
 				84D6CAD61D51A2AB004AA64A /* JXLineView.swift in Sources */,
 				8475BCB11D5486B80053FDE2 /* JXProtectViewController.swift in Sources */,
 				8475BCB51D5487560053FDE2 /* JXProtectView.swift in Sources */,
@@ -637,6 +661,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "extension/String/passwordManagement-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -654,6 +679,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagement;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "extension/String/passwordManagement-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
@@ -662,10 +688,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = passwordManagementTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagementTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "extension/String/passwordManagementTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/passwordManagement.app/passwordManagement";
 			};
@@ -675,10 +704,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = passwordManagementTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagementTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "extension/String/passwordManagementTests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/passwordManagement.app/passwordManagement";
 			};
@@ -687,10 +718,13 @@
 		84803F3B1D4B51540090C893 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = passwordManagementUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagementUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "extension/String/passwordManagementUITests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = passwordManagement;
 			};
@@ -699,10 +733,12 @@
 		84803F3C1D4B51540090C893 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = passwordManagementUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.lvstudent.passwordManagementUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "extension/String/passwordManagementUITests-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = passwordManagement;
 			};

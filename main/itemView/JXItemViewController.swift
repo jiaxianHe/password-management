@@ -18,6 +18,7 @@ class JXItemViewController: UIViewController {
         super.viewDidLoad()
         data = [("QQ", "123456"), ("WW", "123456"), ("EE", "123456"), ("RR", "123456"), ("TT", "123456"), ]
         addTableView()
+        
     }
     
     private func tableView(_ tableView: JXItemTableView, didSelectRowAt indexPath: IndexPath) {
