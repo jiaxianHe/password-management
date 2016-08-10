@@ -15,6 +15,7 @@ class JXProtectView: UIView {
     var codeNumber: ((UIButton) -> Void)?
     private let numberButtonBackgroundView = UIView()
     private let codeIdentifyBackgroundView = UIView()
+    private var centerXConstraint: NSLayoutConstraint!
     
     convenience init() {
         self.init(frame:CGRect.zero)
@@ -22,6 +23,13 @@ class JXProtectView: UIView {
         addNumberButton()
         addFingerprintAndCancelButton()
         addCodeIdentify()
+        let title = JXAppDelegate.isCanUseFingerprint ? "Touch ID 或输入密码" : "输入密码"
+        let titleLabel = UILabel.convenient(title: title, titleColor: UIColor.blue(), font: 16, tag: nil, textAlignment: .center)
+        self.addSubview(titleLabel)
+        titleLabel.layout { [weak self] in
+            $0.centerXAnchor.constraint(equalTo: $0.superview!.centerXAnchor).activeTrue()
+            $0.bottomAnchor.constraint(equalTo: self!.codeIdentifyBackgroundView.topAnchor, constant: -20).activeTrue()
+        }
     }
     
     private func addFingerprintAndCancelButton() {
@@ -51,7 +59,7 @@ class JXProtectView: UIView {
 //MARK: - NumberButton
 extension JXProtectView {
     private func addNumberButton() {
-        numberButtonBackgroundView.backgroundColor = UIColor.red()
+//        numberButtonBackgroundView.backgroundColor = UIColor.red()
         self.addSubview(numberButtonBackgroundView)
         numberButtonBackgroundView.layout {
             $0.leftAnchor.constraint(equalTo: $0.superview!.leftAnchor, constant: 20).activeTrue()
@@ -112,11 +120,13 @@ extension JXProtectView {
 
 //MARK: - CodeIdentify
 extension JXProtectView {
+    
     private func addCodeIdentify() {
         self.addSubview(codeIdentifyBackgroundView)
+        centerXConstraint = codeIdentifyBackgroundView.centerXAnchor.constraint(equalTo: codeIdentifyBackgroundView.superview!.centerXAnchor)
         codeIdentifyBackgroundView.layout { [weak self] in
-            $0.centerXAnchor.constraint(equalTo: $0.superview!.centerXAnchor).activeTrue()
-            $0.bottomAnchor.constraint(equalTo: self!.numberButtonBackgroundView.topAnchor, constant: -30).activeTrue()
+            self!.centerXConstraint.activeTrue()
+            $0.bottomAnchor.constraint(equalTo: self!.numberButtonBackgroundView.topAnchor, constant: -10).activeTrue()
             $0.layoutSize(size: CGSize(width: 210, height: 20))
         }
         
@@ -137,16 +147,33 @@ extension JXProtectView {
     }
     
     func outAcode(number: Int) {
-        if number >= 0 && number <= 5{
+        if number >= 0 && number <= 5 {
             let circleView = codeIdentifyBackgroundView.viewWithTag(2000 + number) as! JXCircleView
             circleView.mode = .stroke
             circleView.setNeedsDisplay()
         }
     }
     
-    func codeIdentifyShake() {
-        UIView.animate(withDuration: 0.1, animations: { 
-            codeIdentifyBackgroundView
-            }, completion: <#T##((Bool) -> Void)?##((Bool) -> Void)?##(Bool) -> Void#>)
+    func codeIdentifyShake(completion:() -> Void) {
+        UIView.animate(withDuration: 0.05, animations: {
+            self.centerXConstraint.constant += 20
+            self.codeIdentifyBackgroundView.layoutIfNeeded()
+        }, completion:nil)
+        UIView.animate(withDuration: 0.1, delay: 0.05, options: [], animations: {
+            self.centerXConstraint.constant -= 40
+            self.codeIdentifyBackgroundView.layoutIfNeeded()
+            }, completion: nil)
+        UIView.animate(withDuration: 0.3, delay: 0.15, usingSpringWithDamping: 0.1, initialSpringVelocity: 10, options: [], animations: {
+            self.centerXConstraint.constant += 20
+            self.codeIdentifyBackgroundView.layoutIfNeeded()
+        }) { (finish) in
+            DispatchQueue.main.async {
+                completion()
+            }
+        }
+    }
+    
+    private func shakeBack() {
+        
     }
 }

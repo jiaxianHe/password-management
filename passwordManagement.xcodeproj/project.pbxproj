@@ -45,6 +45,9 @@
 		848E7BCE1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */; };
 		848E7BCF1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */; };
 		848E7BD01D59CE3F00DE53A7 /* JXCircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */; };
+		848E7BD31D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BD21D5AD69C00DE53A7 /* JXLabelConvenient.swift */; };
+		848E7BD41D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BD21D5AD69C00DE53A7 /* JXLabelConvenient.swift */; };
+		848E7BD51D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848E7BD21D5AD69C00DE53A7 /* JXLabelConvenient.swift */; };
 		84983B321D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
 		84983B331D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
 		84983B341D533812002480F4 /* JXUserConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84983B311D533812002480F4 /* JXUserConfiguration.swift */; };
@@ -105,6 +108,7 @@
 		84803F511D4EE8250090C893 /* JXViewConfigure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewConfigure.swift; sourceTree = "<group>"; };
 		848E7BC91D59AA8600DE53A7 /* JXViewControllerConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewControllerConvenient.swift; sourceTree = "<group>"; };
 		848E7BCD1D59CE3F00DE53A7 /* JXCircleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXCircleView.swift; sourceTree = "<group>"; };
+		848E7BD21D5AD69C00DE53A7 /* JXLabelConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXLabelConvenient.swift; sourceTree = "<group>"; };
 		84983B311D533812002480F4 /* JXUserConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUserConfiguration.swift; sourceTree = "<group>"; };
 		84D6CAC31D5187A1004AA64A /* JXUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXUtility.swift; sourceTree = "<group>"; };
 		84D6CAC71D518D05004AA64A /* JXConfigureFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXConfigureFile.swift; sourceTree = "<group>"; };
@@ -225,6 +229,7 @@
 		84803F421D4EE6E00090C893 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				848E7BD11D5AD68E00DE53A7 /* UILabel */,
 				848E7BC81D59AA6200DE53A7 /* UIViewController */,
 				84803F4F1D4EE7A70090C893 /* UIButton */,
 				84803F501D4EE7A70090C893 /* UIView */,
@@ -282,6 +287,14 @@
 				848E7BC91D59AA8600DE53A7 /* JXViewControllerConvenient.swift */,
 			);
 			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		848E7BD11D5AD68E00DE53A7 /* UILabel */ = {
+			isa = PBXGroup;
+			children = (
+				848E7BD21D5AD69C00DE53A7 /* JXLabelConvenient.swift */,
+			);
+			path = UILabel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -424,6 +437,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848E7BD31D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */,
 				84803F461D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
 				84551D2D1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
 				848E7BCE1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
@@ -449,6 +463,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848E7BD41D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */,
 				84803F471D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
 				84551D2E1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
 				848E7BCF1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
@@ -474,6 +489,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848E7BD51D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */,
 				84803F481D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
 				84551D2F1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
 				848E7BD01D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,

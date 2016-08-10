@@ -39,6 +39,9 @@ class JXProtectViewController: UIViewController {
     }
 
     private func codeNumberAction(sender: UIButton) {
+        guard code.count < 6 else {
+            return
+        }
         let password = [0, 0, 0, 0, 0, 0]
         protectView.inAcode(number: code.count)
         code.append(sender.tag - 2000)
@@ -48,11 +51,14 @@ class JXProtectViewController: UIViewController {
                 verifySuccess()
             }
             else {
-                for No in 0 ..< 6 {
-                    protectView.outAcode(number: No)
+                protectView.codeIdentifyShake() {
+                    for No in 0 ..< 6 {
+                        self.protectView.outAcode(number: No)
+                    }
+                    self.code.removeAll()
+                    self.protectView.cancelButton.setTitle("取消", for: .normal)
                 }
-                code.removeAll()
-                protectView.cancelButton.setTitle("取消", for: .normal)
+                
             }
             
         }
