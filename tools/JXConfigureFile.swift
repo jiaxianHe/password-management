@@ -8,6 +8,7 @@
 
 import UIKit
 
+typealias JXData = Array<(String, String, String, String)>
 let JXAppDelegate = UIApplication.shared().delegate as! AppDelegate
 
 let screenWidth = UIScreen.main().bounds.size.width

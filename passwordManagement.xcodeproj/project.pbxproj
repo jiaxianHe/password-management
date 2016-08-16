@@ -7,9 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840A48B21D62B5D400824789 /* JXViewConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A48B11D62B5D400824789 /* JXViewConvenient.swift */; };
+		840A48B31D62B5D400824789 /* JXViewConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A48B11D62B5D400824789 /* JXViewConvenient.swift */; };
+		840A48B41D62B5D400824789 /* JXViewConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840A48B11D62B5D400824789 /* JXViewConvenient.swift */; };
 		842DB7D91D5B125C0063AE50 /* JXStringCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB7D81D5B125C0063AE50 /* JXStringCode.swift */; };
 		842DB7DA1D5B125C0063AE50 /* JXStringCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB7D81D5B125C0063AE50 /* JXStringCode.swift */; };
 		842DB7DB1D5B125C0063AE50 /* JXStringCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842DB7D81D5B125C0063AE50 /* JXStringCode.swift */; };
+		843354321D5C547D004264C9 /* JXListAllPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843354311D5C547D004264C9 /* JXListAllPasswordViewController.swift */; };
+		843354331D5C547D004264C9 /* JXListAllPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843354311D5C547D004264C9 /* JXListAllPasswordViewController.swift */; };
+		843354341D5C547D004264C9 /* JXListAllPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843354311D5C547D004264C9 /* JXListAllPasswordViewController.swift */; };
+		8433543A1D5C54DE004264C9 /* JXListAllPasswordTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843354391D5C54DE004264C9 /* JXListAllPasswordTableView.swift */; };
+		8433543B1D5C54DE004264C9 /* JXListAllPasswordTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843354391D5C54DE004264C9 /* JXListAllPasswordTableView.swift */; };
+		8433543C1D5C54DE004264C9 /* JXListAllPasswordTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 843354391D5C54DE004264C9 /* JXListAllPasswordTableView.swift */; };
 		84551D2A1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */; };
 		84551D2B1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */; };
 		84551D2C1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */; };
@@ -22,12 +31,21 @@
 		84551D341D58608D00EF7AA5 /* JXButtonConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D331D58608D00EF7AA5 /* JXButtonConvenient.swift */; };
 		84551D351D58608D00EF7AA5 /* JXButtonConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D331D58608D00EF7AA5 /* JXButtonConvenient.swift */; };
 		84551D361D58608D00EF7AA5 /* JXButtonConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84551D331D58608D00EF7AA5 /* JXButtonConvenient.swift */; };
+		8473C77E1D61C7FE00F270AB /* JXAddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473C77D1D61C7FE00F270AB /* JXAddItemViewController.swift */; };
+		8473C77F1D61C7FE00F270AB /* JXAddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473C77D1D61C7FE00F270AB /* JXAddItemViewController.swift */; };
+		8473C7801D61C7FE00F270AB /* JXAddItemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473C77D1D61C7FE00F270AB /* JXAddItemViewController.swift */; };
+		8473C7831D61CB8100F270AB /* JXTextFieldConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473C7821D61CB8100F270AB /* JXTextFieldConvenient.swift */; };
+		8473C7841D61CB8100F270AB /* JXTextFieldConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473C7821D61CB8100F270AB /* JXTextFieldConvenient.swift */; };
+		8473C7851D61CB8100F270AB /* JXTextFieldConvenient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8473C7821D61CB8100F270AB /* JXTextFieldConvenient.swift */; };
 		8475BCAF1D5486B80053FDE2 /* JXProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475BCAE1D5486B80053FDE2 /* JXProtectViewController.swift */; };
 		8475BCB01D5486B80053FDE2 /* JXProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475BCAE1D5486B80053FDE2 /* JXProtectViewController.swift */; };
 		8475BCB11D5486B80053FDE2 /* JXProtectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475BCAE1D5486B80053FDE2 /* JXProtectViewController.swift */; };
 		8475BCB31D5487560053FDE2 /* JXProtectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475BCB21D5487560053FDE2 /* JXProtectView.swift */; };
 		8475BCB41D5487560053FDE2 /* JXProtectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475BCB21D5487560053FDE2 /* JXProtectView.swift */; };
 		8475BCB51D5487560053FDE2 /* JXProtectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8475BCB21D5487560053FDE2 /* JXProtectView.swift */; };
+		847A60281D619FBD0081F0AE /* JXPasswordSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A60271D619FBD0081F0AE /* JXPasswordSpaceViewController.swift */; };
+		847A60291D619FBD0081F0AE /* JXPasswordSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A60271D619FBD0081F0AE /* JXPasswordSpaceViewController.swift */; };
+		847A602A1D619FBD0081F0AE /* JXPasswordSpaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847A60271D619FBD0081F0AE /* JXPasswordSpaceViewController.swift */; };
 		84803F101D4B51540090C893 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84803F0F1D4B51540090C893 /* AppDelegate.swift */; };
 		84803F171D4B51540090C893 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84803F161D4B51540090C893 /* Assets.xcassets */; };
 		84803F1A1D4B51540090C893 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84803F181D4B51540090C893 /* LaunchScreen.storyboard */; };
@@ -89,16 +107,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		840A48B11D62B5D400824789 /* JXViewConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXViewConvenient.swift; sourceTree = "<group>"; };
 		842DB7D81D5B125C0063AE50 /* JXStringCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXStringCode.swift; sourceTree = "<group>"; };
 		842DB7DC1D5B162B0063AE50 /* passwordManagement-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passwordManagement-Bridging-Header.h"; sourceTree = "<group>"; };
 		842DB7DD1D5B162B0063AE50 /* passwordManagementTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passwordManagementTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		842DB7DE1D5B162B0063AE50 /* passwordManagementUITests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "passwordManagementUITests-Bridging-Header.h"; sourceTree = "<group>"; };
+		843354311D5C547D004264C9 /* JXListAllPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXListAllPasswordViewController.swift; sourceTree = "<group>"; };
+		843354391D5C54DE004264C9 /* JXListAllPasswordTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXListAllPasswordTableView.swift; sourceTree = "<group>"; };
 		84551D241D585FDD00EF7AA5 /* KeychainSwift.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwift.swift; sourceTree = "<group>"; };
 		84551D251D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainSwiftAccessOptions.swift; sourceTree = "<group>"; };
 		84551D261D585FDD00EF7AA5 /* TegKeychainConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TegKeychainConstants.swift; sourceTree = "<group>"; };
 		84551D331D58608D00EF7AA5 /* JXButtonConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXButtonConvenient.swift; sourceTree = "<group>"; };
+		8473C77D1D61C7FE00F270AB /* JXAddItemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXAddItemViewController.swift; sourceTree = "<group>"; };
+		8473C7821D61CB8100F270AB /* JXTextFieldConvenient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXTextFieldConvenient.swift; sourceTree = "<group>"; };
 		8475BCAE1D5486B80053FDE2 /* JXProtectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXProtectViewController.swift; sourceTree = "<group>"; };
 		8475BCB21D5487560053FDE2 /* JXProtectView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXProtectView.swift; sourceTree = "<group>"; };
+		847A60271D619FBD0081F0AE /* JXPasswordSpaceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JXPasswordSpaceViewController.swift; sourceTree = "<group>"; };
 		84803F0C1D4B51540090C893 /* passwordManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = passwordManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84803F0F1D4B51540090C893 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84803F161D4B51540090C893 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -160,6 +184,23 @@
 			path = String;
 			sourceTree = "<group>";
 		};
+		8433542F1D5C544B004264C9 /* listAllPasswordView */ = {
+			isa = PBXGroup;
+			children = (
+				843354311D5C547D004264C9 /* JXListAllPasswordViewController.swift */,
+				843354391D5C54DE004264C9 /* JXListAllPasswordTableView.swift */,
+			);
+			path = listAllPasswordView;
+			sourceTree = "<group>";
+		};
+		843354301D5C544B004264C9 /* passwordSpaceView */ = {
+			isa = PBXGroup;
+			children = (
+				847A60271D619FBD0081F0AE /* JXPasswordSpaceViewController.swift */,
+			);
+			path = passwordSpaceView;
+			sourceTree = "<group>";
+		};
 		84551D211D585FDD00EF7AA5 /* KeychainSwift */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,6 +209,22 @@
 				84551D261D585FDD00EF7AA5 /* TegKeychainConstants.swift */,
 			);
 			path = KeychainSwift;
+			sourceTree = "<group>";
+		};
+		8473C77C1D61C7EC00F270AB /* addItemView */ = {
+			isa = PBXGroup;
+			children = (
+				8473C77D1D61C7FE00F270AB /* JXAddItemViewController.swift */,
+			);
+			path = addItemView;
+			sourceTree = "<group>";
+		};
+		8473C7811D61CB5A00F270AB /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				8473C7821D61CB8100F270AB /* JXTextFieldConvenient.swift */,
+			);
+			path = UITextField;
 			sourceTree = "<group>";
 		};
 		8475BCAD1D5486AB0053FDE2 /* protectView */ = {
@@ -247,6 +304,7 @@
 		84803F421D4EE6E00090C893 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				8473C7811D61CB5A00F270AB /* UITextField */,
 				842DB7D71D5B12430063AE50 /* String */,
 				848E7BD11D5AD68E00DE53A7 /* UILabel */,
 				848E7BC81D59AA6200DE53A7 /* UIViewController */,
@@ -259,6 +317,9 @@
 		84803F431D4EE6E00090C893 /* main */ = {
 			isa = PBXGroup;
 			children = (
+				8473C77C1D61C7EC00F270AB /* addItemView */,
+				8433542F1D5C544B004264C9 /* listAllPasswordView */,
+				843354301D5C544B004264C9 /* passwordSpaceView */,
 				8475BCAD1D5486AB0053FDE2 /* protectView */,
 				84803F4A1D4EE7450090C893 /* itemView */,
 			);
@@ -296,6 +357,7 @@
 			children = (
 				84803F511D4EE8250090C893 /* JXViewConfigure.swift */,
 				84D6CAD31D51A2AB004AA64A /* JXLineView.swift */,
+				840A48B11D62B5D400824789 /* JXViewConvenient.swift */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -460,11 +522,14 @@
 			files = (
 				848E7BD31D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */,
 				84803F461D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				843354321D5C547D004264C9 /* JXListAllPasswordViewController.swift in Sources */,
 				84551D2D1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
 				848E7BCE1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
+				847A60281D619FBD0081F0AE /* JXPasswordSpaceViewController.swift in Sources */,
 				848E7BCA1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */,
 				84D6CACC1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4C1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
+				840A48B21D62B5D400824789 /* JXViewConvenient.swift in Sources */,
 				84D6CAC81D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84D6CAD01D518F12004AA64A /* JXItemTableView.swift in Sources */,
 				842DB7D91D5B125C0063AE50 /* JXStringCode.swift in Sources */,
@@ -473,8 +538,11 @@
 				8475BCB31D5487560053FDE2 /* JXProtectView.swift in Sources */,
 				84803F101D4B51540090C893 /* AppDelegate.swift in Sources */,
 				84551D341D58608D00EF7AA5 /* JXButtonConvenient.swift in Sources */,
+				8473C7831D61CB8100F270AB /* JXTextFieldConvenient.swift in Sources */,
+				8473C77E1D61C7FE00F270AB /* JXAddItemViewController.swift in Sources */,
 				84983B321D533812002480F4 /* JXUserConfiguration.swift in Sources */,
 				84551D2A1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */,
+				8433543A1D5C54DE004264C9 /* JXListAllPasswordTableView.swift in Sources */,
 				84D6CAC41D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84551D301D585FDD00EF7AA5 /* TegKeychainConstants.swift in Sources */,
 				84803F521D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
@@ -487,11 +555,14 @@
 			files = (
 				848E7BD41D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */,
 				84803F471D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				843354331D5C547D004264C9 /* JXListAllPasswordViewController.swift in Sources */,
 				84551D2E1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
 				848E7BCF1D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
+				847A60291D619FBD0081F0AE /* JXPasswordSpaceViewController.swift in Sources */,
 				848E7BCB1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */,
 				84D6CACD1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4D1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
+				840A48B31D62B5D400824789 /* JXViewConvenient.swift in Sources */,
 				84D6CAC91D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84D6CAD11D518F12004AA64A /* JXItemTableView.swift in Sources */,
 				842DB7DA1D5B125C0063AE50 /* JXStringCode.swift in Sources */,
@@ -500,8 +571,11 @@
 				8475BCB41D5487560053FDE2 /* JXProtectView.swift in Sources */,
 				84803F251D4B51540090C893 /* passwordManagementTests.swift in Sources */,
 				84551D351D58608D00EF7AA5 /* JXButtonConvenient.swift in Sources */,
+				8473C7841D61CB8100F270AB /* JXTextFieldConvenient.swift in Sources */,
+				8473C77F1D61C7FE00F270AB /* JXAddItemViewController.swift in Sources */,
 				84983B331D533812002480F4 /* JXUserConfiguration.swift in Sources */,
 				84551D2B1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */,
+				8433543B1D5C54DE004264C9 /* JXListAllPasswordTableView.swift in Sources */,
 				84D6CAC51D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84551D311D585FDD00EF7AA5 /* TegKeychainConstants.swift in Sources */,
 				84803F531D4EE8250090C893 /* JXViewConfigure.swift in Sources */,
@@ -514,11 +588,14 @@
 			files = (
 				848E7BD51D5AD69C00DE53A7 /* JXLabelConvenient.swift in Sources */,
 				84803F481D4EE7180090C893 /* JXNavigationViewController.swift in Sources */,
+				843354341D5C547D004264C9 /* JXListAllPasswordViewController.swift in Sources */,
 				84551D2F1D585FDD00EF7AA5 /* KeychainSwiftAccessOptions.swift in Sources */,
 				848E7BD01D59CE3F00DE53A7 /* JXCircleView.swift in Sources */,
+				847A602A1D619FBD0081F0AE /* JXPasswordSpaceViewController.swift in Sources */,
 				848E7BCC1D59AA8600DE53A7 /* JXViewControllerConvenient.swift in Sources */,
 				84D6CACE1D518D69004AA64A /* JXTableView.swift in Sources */,
 				84803F4E1D4EE74C0090C893 /* JXItemViewController.swift in Sources */,
+				840A48B41D62B5D400824789 /* JXViewConvenient.swift in Sources */,
 				84D6CACA1D518D05004AA64A /* JXConfigureFile.swift in Sources */,
 				84D6CAD21D518F12004AA64A /* JXItemTableView.swift in Sources */,
 				842DB7DB1D5B125C0063AE50 /* JXStringCode.swift in Sources */,
@@ -527,8 +604,11 @@
 				8475BCB51D5487560053FDE2 /* JXProtectView.swift in Sources */,
 				84803F301D4B51540090C893 /* passwordManagementUITests.swift in Sources */,
 				84551D361D58608D00EF7AA5 /* JXButtonConvenient.swift in Sources */,
+				8473C7851D61CB8100F270AB /* JXTextFieldConvenient.swift in Sources */,
+				8473C7801D61C7FE00F270AB /* JXAddItemViewController.swift in Sources */,
 				84983B341D533812002480F4 /* JXUserConfiguration.swift in Sources */,
 				84551D2C1D585FDD00EF7AA5 /* KeychainSwift.swift in Sources */,
+				8433543C1D5C54DE004264C9 /* JXListAllPasswordTableView.swift in Sources */,
 				84D6CAC61D5187A1004AA64A /* JXUtility.swift in Sources */,
 				84551D321D585FDD00EF7AA5 /* TegKeychainConstants.swift in Sources */,
 				84803F541D4EE8250090C893 /* JXViewConfigure.swift in Sources */,

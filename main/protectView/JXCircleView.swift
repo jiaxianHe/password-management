@@ -10,20 +10,16 @@ import UIKit
 
 class JXCircleView: UIView {
 
-    private var lineWidth: CGFloat
-    private var color: UIColor
-    var mode: CGPathDrawingMode
+    private var lineWidth: CGFloat!
+    private var color: UIColor!
+    var mode: CGPathDrawingMode!
     
-    init(lineWidth: CGFloat, color: UIColor, mode: CGPathDrawingMode) {
+    convenience init(lineWidth: CGFloat, color: UIColor, mode: CGPathDrawingMode) {
+        self.init(frame:CGRect.zero)
         self.lineWidth = lineWidth
         self.color = color
         self.mode = mode
-        super.init(frame:CGRect.zero)
         self.backgroundColor = UIColor.white()
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
     
     override func draw(_ rect: CGRect) {
@@ -35,7 +31,6 @@ class JXCircleView: UIView {
             _context.addArc(centerX: rect.size.width / 2, y: rect.size.height / 2, radius: rect.size.width / 2 - lineWidth, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: 0)
             _context.drawPath(using: mode)
         }
-        
     }
     
     deinit {

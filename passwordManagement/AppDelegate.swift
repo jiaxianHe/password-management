@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             return true
         }
     }
+    var data: JXData!
     
     var window: UIWindow?
     private var _rootViewController = JXNavigationViewController(rootViewController:JXItemViewController())
@@ -29,6 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         window = UIWindow(frame: UIScreen.main().bounds)
+        data = [("QQ", "123456", "51532b362582c2bb6e", "md5"), ("WW", "123456", "51532b362582c2bb6e", "md5"), ("EE", "123456", "51532b362582c2bb6e", "md5"), ("RR", "123456", "51532b362582c2bb6e", "md5"), ("TT", "123456", "51532b362582c2bb6e", "md5")]
         window?.rootViewController = _rootViewController
         window?.backgroundColor = UIColor.white()
         window?.makeKeyAndVisible()

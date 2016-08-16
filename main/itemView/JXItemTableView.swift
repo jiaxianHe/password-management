@@ -12,9 +12,9 @@ class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
 
     var didSelectRow: ((JXItemTableView, IndexPath) -> Void)?
     var deleteRow: ((JXItemTableView, IndexPath) -> Void)?
-    var data: Array<(String, String)>!
+    var data: JXData!
     
-    convenience init(data: Array<(String, String)>) {
+    convenience init(data: JXData) {
         self.init(style: .plain)
         self.data = data
         self.set(delegate: self, dataSource: self)
@@ -26,9 +26,9 @@ class JXItemTableView: JXTableView, UITableViewDelegate, UITableViewDataSource {
         var cell = tableView.dequeueReusableCell(withIdentifier: identifier)
         if cell == nil {
             cell = UITableViewCell(style: .default, reuseIdentifier: identifier)
-            UIView.createHorizontalLine(supperView: cell!.contentView, left: 15, right: 0, isTop: (false, 0))
+            UIView.createHorizontalLine(supperView: cell!, left: 15, right: 0, isTop: (false, 0))
         }
-        cell?.textLabel?.text = data[indexPath.row].0
+        cell!.textLabel?.text = data[indexPath.row].0
         return cell!
     }
     

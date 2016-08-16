@@ -22,6 +22,32 @@ func imagePathWithName(_ name : String) -> UIImage? {
     }
     return UIImage(contentsOfFile: path)
 }
+
+//MARK: - 删除两端空格
+func deleteSpaceOnBothEnds(string: String) -> String {
+    let regTags = "^ *| *$"
+    do {
+        let regex = try RegularExpression(pattern: regTags, options: [.caseInsensitive])
+        var _string = string
+        let matches = regex.matches(in: _string, options: [.reportProgress], range: NSMakeRange(0, _string.characters.count))
+        for result in matches.reversed() {
+            _string.remove(at: _string.index(_string.startIndex, offsetBy: result.range.length))
+        }
+        return _string
+    }
+    catch {
+        return ""
+    }
+    
+//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regTags options:NSRegularExpressionCaseInsensitive error:nil];
+//    NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
+//    for (NSInteger i = [matches count]; i > 0; i --)
+//    {
+//        NSTextCheckingResult *result = [matches objectAtIndex:i - 1];
+//        [str deleteCharactersInRange:result.range];
+//    }
+}
+
 //MARK: - NSDateFormatter单例
 class DateFormatter: Foundation.DateFormatter {
     static let sharedDateFormatter = DateFormatter()

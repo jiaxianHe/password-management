@@ -83,8 +83,9 @@ extension String {
         }
         
         result.deallocateCapacity(digestLen)
-        
-        return String(format: hash as String)
+        //项目特殊需要
+        return hash.substring(to: 32)
+//        return String(format: hash as String)
     }
     
 }

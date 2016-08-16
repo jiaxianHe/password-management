@@ -9,3 +9,4 @@
 import Foundation
 
 var isNeedToProtect = true
+var codeRange = [(0, 18)]
