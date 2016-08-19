@@ -7,16 +7,68 @@
 //
 
 import UIKit
+import LocalAuthentication
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
+    var isCanUseFingerprint: Bool {
+        get {
+            var error: NSError?
+            let verification = LAContext().canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: &error)
+            if !verification && error?.code == LAError.touchIDNotAvailable.rawValue {
+                return false
+            }
+            return true
+        }
+    }
+    var data: JXData!
+    private let keychain = KeychainSwift()
+    
     var window: UIWindow?
+    private var _rootViewController = JXNavigationViewController(rootViewController:JXItemViewController())
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main().bounds)
+        getUserData()
+        
+        window?.rootViewController = _rootViewController
+        window?.backgroundColor = UIColor.white()
+        window?.makeKeyAndVisible()
         return true
+    }
+    
+    private func getUserData() {
+        
+        if let isNeedToProtect = UserDefaults.standard.object(forKey: "JXisNeedToProtect") as? NSNumber {
+            JXisNeedToProtect = isNeedToProtect.boolValue
+        }
+        else {
+            UserDefaults.standard.set(NSNumber(value: 1), forKey: "JXisNeedToProtect")
+            JXisNeedToProtect = true
+        }
+        if let passwordData = keychain.getData(JXkeychainKey), let passwordDic = NSKeyedUnarchiver.unarchiveObject(with: passwordData) {
+            JXpasswordRange = (passwordDic[JXpasswordRangeKey]) as! Array<[Int]>
+            data = (passwordDic[JXDataKey]) as! Array<[String]>
+            JXprotectPassword = (passwordDic[JXprotectPasswordKey]) as! Array<Int>
+        }
+        else {
+            data = []
+            JXpasswordRange = [[0, 12]]
+            JXprotectPassword = [0, 0, 0, 0, 0, 0]
+            saveData()
+        }
+//        data = [["QQ", "123456", "51532b362582c2bb6e", "md5"], ["WW", "123456", "51532b362582c2bb6e", "md5"], ["EE", "123456", "51532b362582c2bb6e", "md5"], ["RR", "123456", "51532b362582c2bb6e", "md5"], ["TT", "123456", "51532b362582c2bb6e", "md5"]]
+        
+    }
+    
+    func saveData() {
+        let passwordData = NSKeyedArchiver.archivedData(withRootObject: [JXDataKey: data, JXpasswordRangeKey: JXpasswordRange, JXprotectPasswordKey: JXprotectPassword] as NSDictionary)
+        let isSuccess = keychain.set(passwordData, forKey: JXkeychainKey)
+        if !isSuccess {
+            saveData()
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
