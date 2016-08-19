@@ -8,5 +8,10 @@
 
 import Foundation
 
-var isNeedToProtect = true
-var codeRange = [(0, 18)]
+var JXisNeedToProtect = true
+var JXpasswordRange: Array<[Int]>!
+var JXprotectPassword: Array<Int>!
+let JXDataKey = "JXDataKey"
+let JXpasswordRangeKey = "JXpasswordRangeKey"
+let JXprotectPasswordKey = "JXprotectPasswordKey"
+let JXkeychainKey = "cn.lvstudent.passwordManagement.keychain"

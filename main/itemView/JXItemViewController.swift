@@ -24,18 +24,31 @@ class JXItemViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        if JXIsNeedToRefreshItemView {
+            itemTableView.data = JXAppDelegate.data
+            itemTableView.reloadData()
+            JXIsNeedToRefreshItemView = false
+        }
+    }
+    
     private func tableView(_ tableView: JXItemTableView, didSelectRowAt indexPath: IndexPath) {
         showAlertView(didSelectRowAt: indexPath)
     }
     
     private func tableView(_ tableView: JXItemTableView, deleteRowAt indexPath: IndexPath) {
         JXAppDelegate.data.remove(at: indexPath.row)
+        DispatchQueue.global().async { 
+            JXAppDelegate.saveData()
+        }
         tableView.data = JXAppDelegate.data
         tableView.deleteRows(at: [indexPath], with: .bottom)
     }
     
     @objc private func menuButtonAction(sender: UIButton) {
-        
+        let menuViewController = JXMenuViewController()
+        let nav_menuViewController = JXNavigationViewController(rootViewController: menuViewController)
+        self.present(nav_menuViewController, animated: true, completion: nil)
     }
     
     @objc private func addButtonAction(sender: UIButton) {
@@ -57,7 +70,7 @@ extension JXItemViewController {
         }
         let editAction = UIAlertAction(title: "进入密码空间", style: .default) {
             [weak self] action in
-            self!.editAction()
+            self!.editAction(didSelectRowAt: indexPath)
         }
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
         alertView.addAction(singleShowAction)
@@ -68,7 +81,7 @@ extension JXItemViewController {
     }
     
     private func singleSelectAction(didSelectRowAt indexPath: IndexPath) {
-        if isNeedToProtect {
+        if JXisNeedToProtect {
             let protectViewController = JXProtectViewController()
             protectViewController.verificationResults = { [weak self] (finish) in
                 if finish {
@@ -76,6 +89,9 @@ extension JXItemViewController {
                 }
             }
             self.present(protectViewController, animated: true, completion: nil)
+        }
+        else {
+            showOnePassword(didSelectRowAt: indexPath)
         }
     }
     
@@ -90,26 +106,29 @@ extension JXItemViewController {
             self!.copyUserfulPasswordAction(didSelectRowAt: indexPath)
         }
         let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: nil)
-        showAlertViewWith(title: data.0, message: data.1 + "\n\n" + data.2, alertAction: copyOriginalPasswordAction, copyUserfulPasswordAction, cancelAction)
+        showAlertViewWith(title: data[0], message: data[1] + "\n\n" + data[2], alertAction: copyOriginalPasswordAction, copyUserfulPasswordAction, cancelAction)
     }
     
     private func copyOriginalPasswordAction(didSelectRowAt indexPath: IndexPath) {
         let pasteboard = UIPasteboard.general()
-        pasteboard.string = JXAppDelegate.data[indexPath[1]].1
+        pasteboard.string = JXAppDelegate.data[indexPath[1]][1]
     }
     
     private func copyUserfulPasswordAction(didSelectRowAt indexPath: IndexPath) {
         let pasteboard = UIPasteboard.general()
-        pasteboard.string = JXAppDelegate.data[indexPath[1]].2
+        pasteboard.string = JXAppDelegate.data[indexPath[1]][2]
     }
     
     private func selectListAction() {
-        if isNeedToProtect {
+        if JXisNeedToProtect {
             let protectViewController = JXProtectViewController()
             protectViewController.verificationResults = { [weak self] (finish) in
                 self!.showPassworkList()
             }
             self.present(protectViewController, animated: true, completion: nil)
+        }
+        else {
+            showPassworkList()
         }
     }
     
@@ -117,8 +136,13 @@ extension JXItemViewController {
         self.navigationController?.pushViewController(JXListAllPasswordViewController(), animated: true)
     }
     
-    private func editAction() {
-        self.navigationController?.pushViewController(JXPasswordSpaceViewController(), animated: true)
+    private func editAction(didSelectRowAt indexPath: IndexPath) {
+        let passwordSpaceViewController = JXPasswordSpaceViewController()
+        passwordSpaceViewController.JXitemName = JXAppDelegate.data[indexPath[1]][0]
+        passwordSpaceViewController.JXitemPassword = JXAppDelegate.data[indexPath[1]][1]
+        passwordSpaceViewController.JXisNew = false
+        passwordSpaceViewController.JXrow = indexPath[1]
+        self.navigationController?.pushViewController(passwordSpaceViewController, animated: true)
     }
 }
 

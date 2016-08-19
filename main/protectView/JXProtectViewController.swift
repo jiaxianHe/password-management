@@ -12,7 +12,7 @@ import LocalAuthentication
 class JXProtectViewController: UIViewController {
 
     private var code: Array<Int> = []
-    private let protectView = JXProtectView()
+    private let protectView = JXProtectView(isCanUseFingerprint: JXAppDelegate.isCanUseFingerprint)
     var verificationResults: ((Bool) -> Void)?
     
     override func viewDidLoad() {
@@ -27,11 +27,15 @@ class JXProtectViewController: UIViewController {
             let authentication = LAContext()
             authentication.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: "需要验证你的密码", reply: { (success, error) in
                 if success {
-                    self.verifySuccess()
+                    DispatchQueue.main.async(execute: { 
+                        self.verifySuccess()
+                    })
                 }
                 else {
                     if !automate && error?.code == LAError.touchIDNotEnrolled.rawValue {
-                        self.showAlertViewWith(title:"未开启系统Touch ID", message: "请先在系统设置-Touch ID与密码中开启", alertAction: UIAlertAction(title: "知道了", style: .default, handler: nil))
+                        DispatchQueue.main.async(execute: { 
+                            self.showAlertViewWith(title:"未开启系统Touch ID", message: "请先在系统设置-Touch ID与密码中开启", alertAction: UIAlertAction(title: "知道了", style: .default, handler: nil))
+                        })
                     }
                 }
             })
@@ -42,21 +46,20 @@ class JXProtectViewController: UIViewController {
         guard code.count < 6 else {
             return
         }
-        let password = [0, 0, 0, 0, 0, 0]
         protectView.inAcode(number: code.count)
         code.append(sender.tag - 2000)
         protectView.cancelButton.setTitle("删除", for: .normal)
         if code.count == 6 {
-            if code == password {
+            if code == JXprotectPassword {
                 verifySuccess()
             }
             else {
-                protectView.codeIdentifyShake() {
+                protectView.codeIdentifyShake() { [weak self] in
                     for No in 0 ..< 6 {
-                        self.protectView.outAcode(number: No)
+                        self!.protectView.outAcode(number: No)
                     }
-                    self.code.removeAll()
-                    self.protectView.cancelButton.setTitle("取消", for: .normal)
+                    self!.code.removeAll()
+                    self!.protectView.cancelButton.setTitle("取消", for: .normal)
                 }
                 
             }
@@ -94,6 +97,7 @@ class JXProtectViewController: UIViewController {
 //MARK: - UI
 extension JXProtectViewController {
     func addProtectView() {
+        protectView.title = JXAppDelegate.isCanUseFingerprint ? "Touch ID 或输入密码" : "输入密码"
         self.view.addSubview(protectView)
         protectView.fullLayout()
         protectView.codeNumber = { [weak self] in

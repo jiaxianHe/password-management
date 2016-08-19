@@ -67,9 +67,9 @@ class JXListAllPasswordTableView: JXTableView, UITableViewDelegate, UITableViewD
         if cell == nil {
             cell = JXListAllPasswordTableViewCell(style: .default, identifier: identifier)
         }
-        cell!.itemLabel.text = "项       目：" + data[indexPath.row].0
-        cell!.originalPasswordLabel.text = "原始密码：" + data[indexPath.row].1
-        cell!.userfulPasswordLabel.text = "可用密码：" + data[indexPath.row].2
+        cell!.itemLabel.text = "项       目：" + data[indexPath.row][0]
+        cell!.originalPasswordLabel.text = "原始密码：" + data[indexPath.row][1]
+        cell!.userfulPasswordLabel.text = "可用密码：" + data[indexPath.row][2]
         return cell!
     }
     

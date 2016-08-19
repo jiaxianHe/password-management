@@ -16,15 +16,22 @@ class JXProtectView: UIView {
     private let numberButtonBackgroundView = UIView()
     private let codeIdentifyBackgroundView = UIView()
     private var centerXConstraint: NSLayoutConstraint!
+    private let titleLabel = UILabel.convenient(title: "", titleColor: UIColor.blue(), font: 16, tag: nil, textAlignment: .center)
+    var title: String {
+        set {
+            titleLabel.text = newValue
+        }
+        get {
+            return titleLabel.text!
+        }
+    }
     
-    convenience init() {
+    convenience init(isCanUseFingerprint: Bool) {
         self.init(frame:CGRect.zero)
         self.backgroundColor = UIColor.white()
         addNumberButton()
-        addFingerprintAndCancelButton()
+        addFingerprintAndCancelButton(isCanUseFingerprint: isCanUseFingerprint)
         addCodeIdentify()
-        let title = JXAppDelegate.isCanUseFingerprint ? "Touch ID 或输入密码" : "输入密码"
-        let titleLabel = UILabel.convenient(title: title, titleColor: UIColor.blue(), font: 16, tag: nil, textAlignment: .center)
         self.addSubview(titleLabel)
         titleLabel.layout { [weak self] in
             $0.centerXAnchor.constraint(equalTo: $0.superview!.centerXAnchor).activeTrue()
@@ -32,7 +39,7 @@ class JXProtectView: UIView {
         }
     }
     
-    private func addFingerprintAndCancelButton() {
+    private func addFingerprintAndCancelButton(isCanUseFingerprint: Bool) {
         self.addSubview(cancelButton)
         cancelButton.layout {
             $0.bottomAnchor.constraint(equalTo: $0.superview!.bottomAnchor, constant: -20).activeTrue()
@@ -40,7 +47,7 @@ class JXProtectView: UIView {
             $0.layoutSize(size: CGSize(width: 100, height: 30))
         }
         
-        if JXAppDelegate.isCanUseFingerprint {
+        if isCanUseFingerprint {
             fingerprintButton = UIButton.convenient(title: "使用指纹", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 16, action: nil, target: nil, tag: nil)
             self.addSubview(fingerprintButton!)
             fingerprintButton?.layout {
@@ -173,7 +180,4 @@ extension JXProtectView {
         }
     }
     
-    private func shakeBack() {
-        
-    }
 }

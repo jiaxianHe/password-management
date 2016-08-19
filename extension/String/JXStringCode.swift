@@ -89,3 +89,37 @@ extension String {
     }
     
 }
+
+extension NSString {
+    
+    var ns_md5: NSString {
+        let string = self as String
+        return string.md5
+    }
+    
+    var ns_sha1: NSString {
+        let string = self as String
+        return string.sha1 as NSString
+    }
+    
+    var ns_sha224: NSString {
+        let string = self as String
+        return string.sha224 as NSString
+    }
+    
+    var ns_sha256: NSString {
+        let string = self as String
+        return string.sha256 as NSString
+    }
+    
+    var ns_sha384: NSString {
+        let string = self as String
+        return string.sha384 as NSString
+    }
+    
+    var ns_sha512: NSString {
+        let string = self as String
+        return string.sha512 as NSString
+    }
+    
+}

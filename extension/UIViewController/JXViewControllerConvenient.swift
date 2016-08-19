@@ -9,6 +9,7 @@
 import UIKit
 
 extension UIViewController {
+    
     func showAlertViewWith(title: String?, message: String?, alertAction: UIAlertAction...) -> Void {
         let alertView = UIAlertController(title: title, message: message, preferredStyle: .alert)
         for action in alertAction {
@@ -16,4 +17,5 @@ extension UIViewController {
         }
         self.present(alertView, animated: true, completion: nil)
     }
+    
 }

@@ -16,7 +16,7 @@ func debugLog<T>(_ message: T, file: String = #file, method: String = #function,
 }
 
 //MARK: - 大图片用的方法
-func imagePathWithName(_ name : String) -> UIImage? {
+func JXimagePathWithName(_ name : String) -> UIImage? {
     guard let path = Bundle.main.pathForResource(name, ofType: "png") else {
         return nil
     }
@@ -24,32 +24,31 @@ func imagePathWithName(_ name : String) -> UIImage? {
 }
 
 //MARK: - 删除两端空格
-func deleteSpaceOnBothEnds(string: String) -> String {
+func JXdeleteSpaceOnBothEnds(string: String?) -> String {
+    guard var _string = string else {
+        return ""
+    }
     let regTags = "^ *| *$"
     do {
         let regex = try RegularExpression(pattern: regTags, options: [.caseInsensitive])
-        var _string = string
         let matches = regex.matches(in: _string, options: [.reportProgress], range: NSMakeRange(0, _string.characters.count))
         for result in matches.reversed() {
-            _string.remove(at: _string.index(_string.startIndex, offsetBy: result.range.length))
+            guard result.range.length != 0 else {
+                continue
+            }
+            let start = _string.index(_string.startIndex, offsetBy: result.range.location)
+            let end = _string.index(start, offsetBy: result.range.length)
+            _string.removeSubrange(Range(uncheckedBounds: (start, end)))
         }
         return _string
     }
     catch {
         return ""
     }
-    
-//    NSRegularExpression *regex = [NSRegularExpression regularExpressionWithPattern:regTags options:NSRegularExpressionCaseInsensitive error:nil];
-//    NSArray *matches = [regex matchesInString:string options:0 range:NSMakeRange(0, [string length])];
-//    for (NSInteger i = [matches count]; i > 0; i --)
-//    {
-//        NSTextCheckingResult *result = [matches objectAtIndex:i - 1];
-//        [str deleteCharactersInRange:result.range];
-//    }
 }
 
 //MARK: - NSDateFormatter单例
-class DateFormatter: Foundation.DateFormatter {
+class JXDateFormatter: Foundation.DateFormatter {
     static let sharedDateFormatter = DateFormatter()
     private override init() {
         super.init()

@@ -51,11 +51,11 @@ extension JXListAllPasswordViewController {
     
     private func copyOriginalPasswordAction(didSelectRowAt indexPath: IndexPath) {
         let pasteboard = UIPasteboard.general()
-        pasteboard.string = JXAppDelegate.data[indexPath[1]].1
+        pasteboard.string = JXAppDelegate.data[indexPath[1]][1]
     }
     
     private func copyUserfulPasswordAction(didSelectRowAt indexPath: IndexPath) {
         let pasteboard = UIPasteboard.general()
-        pasteboard.string = JXAppDelegate.data[indexPath[1]].2
+        pasteboard.string = JXAppDelegate.data[indexPath[1]][2]
     }
 }

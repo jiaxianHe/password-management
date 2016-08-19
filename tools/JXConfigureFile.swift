@@ -8,7 +8,7 @@
 
 import UIKit
 
-typealias JXData = Array<(String, String, String, String)>
+typealias JXData = Array<[String]>
 let JXAppDelegate = UIApplication.shared().delegate as! AppDelegate
 
 let screenWidth = UIScreen.main().bounds.size.width
@@ -22,4 +22,4 @@ let JXSystemVersion = UIDevice.current().systemVersion
 let JXBackgroundColor = "#efeff4"
 let JXLineColor = "#dcdcdc"
 
-let JXItemKeychainKey = "cn.lvstudent.passwordManagement.key"
+var JXIsNeedToRefreshItemView = false

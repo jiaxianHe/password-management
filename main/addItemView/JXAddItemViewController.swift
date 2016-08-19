@@ -23,15 +23,20 @@ class JXAddItemViewController: UIViewController, UITextFieldDelegate {
 
     @objc private func confirmButtonAction() {
         UIApplication.shared().keyWindow?.endEditing(true)
-        if itemNameTextField.text == "" {
+        let name = JXdeleteSpaceOnBothEnds(string: itemNameTextField.text)
+        let password = JXdeleteSpaceOnBothEnds(string: itemPasswordTextField.text)
+        if name == "" {
             showAlertViewWith(title: "请输入项目名称", message: "", alertAction: UIAlertAction(title: "确定", style: .default, handler: nil))
         }
-        else if itemPasswordTextField.text == "" {
+        else if password == "" {
             showAlertViewWith(title: "请输入项目密码", message: "", alertAction: UIAlertAction(title: "确定", style: .default, handler: nil))
         }
         else {
             let passwordSpaceViewController = JXPasswordSpaceViewController()
-            passwordSpaceViewController.JXitemName = itemNameTextField.text
+            passwordSpaceViewController.JXitemName = name
+            passwordSpaceViewController.JXitemPassword = password
+            passwordSpaceViewController.JXisNew = true
+            self.navigationController?.pushViewController(passwordSpaceViewController, animated: true)
         }
     }
     
