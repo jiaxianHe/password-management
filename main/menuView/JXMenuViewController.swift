@@ -16,7 +16,7 @@ class JXMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "菜单"
-        self.view.backgroundColor = UIColor.white()
+        self.view.backgroundColor = UIColor.white
         addCancelButton()
         addTableView()
         menuTableView.didSelectRow =  { [weak self] in
@@ -38,7 +38,7 @@ class JXMenuViewController: UIViewController {
     }
     
     private func creatOptionsBackground() {
-        optionsBackground = UIWindow(frame: UIScreen.main().bounds)
+        optionsBackground = UIWindow(frame: UIScreen.main.bounds)
         optionsBackground.backgroundColor = UIColor(white: 0.0, alpha: 0.78)
         optionsBackground.windowLevel = UIWindowLevelAlert - 1
         optionsBackground.isHidden = false
@@ -52,15 +52,11 @@ class JXMenuViewController: UIViewController {
     @objc private func cancelButtonAction(sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
-
-}
-
-//MARK: - SelectPasswordLenght
-extension JXMenuViewController {
     
+//MARK: - SelectPasswordLenght
     private func displaySelectPasswordLenght() {
         let background = UIView()
-        background.backgroundColor = UIColor.white()
+        background.backgroundColor = UIColor.white
         background.fillet(cornerRadius: 5, borderWidth: nil, borderColor: nil)
         optionsBackground.addSubview(background)
         background.layout {
@@ -82,7 +78,7 @@ extension JXMenuViewController {
             $0.rightAnchor.constraint(equalTo: $0.superview!.rightAnchor).activeTrue()
         }
         
-        let confirmButton = UIButton.convenient(title: "确定", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 20, action: #selector(confirmAction), target: self, tag: nil)
+        let confirmButton = UIButton.convenient(title: "确定", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 20, action: #selector(confirmAction), target: self, tag: nil)
         confirmButton.fillet(cornerRadius: nil, borderWidth: onePixel, borderColor: UIColor.color(withHexString: "#666666"))
         background.addSubview(confirmButton)
         
@@ -93,7 +89,7 @@ extension JXMenuViewController {
             $0.bottomAnchor.constraint(equalTo: $0.superview!.bottomAnchor).activeTrue()
         }
         
-        let cancelButton = UIButton.convenient(title: "取消", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 20, action: #selector(cancelAction), target: self, tag: nil)
+        let cancelButton = UIButton.convenient(title: "取消", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 20, action: #selector(cancelAction), target: self, tag: nil)
         cancelButton.fillet(cornerRadius: nil, borderWidth: onePixel, borderColor: UIColor.color(withHexString: "#666666"))
         background.addSubview(cancelButton)
         
@@ -113,7 +109,7 @@ extension JXMenuViewController {
             optionsBackground.isHidden = true
             showAlertViewWith(title: "请选择密码区间", message: nil, alertAction: UIAlertAction(title: "确定", style: .default, handler: { [weak self] (action) in
                 self!.optionsBackground.isHidden = false
-            }))
+                }))
             return
         }
         selectPasswordView.selected.sort()
@@ -150,13 +146,9 @@ extension JXMenuViewController {
         dismissOptionsBackground()
     }
     
-}
-
 //MARK: - UI
-extension JXMenuViewController {
-    
     private func addCancelButton() {
-        let cancelButton = UIButton.convenient(title: "取消", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 18, action: #selector(cancelButtonAction), target: self, tag: nil)
+        let cancelButton = UIButton.convenient(title: "取消", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 18, action: #selector(cancelButtonAction), target: self, tag: nil)
         cancelButton.sizeToFit()
         let cancelItem = UIBarButtonItem(customView: cancelButton)
         self.navigationItem.leftBarButtonItem = cancelItem
@@ -169,3 +161,4 @@ extension JXMenuViewController {
     }
     
 }
+

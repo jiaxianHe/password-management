@@ -16,13 +16,13 @@ class JXAddItemViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "添加项目"
-        self.view.backgroundColor = UIColor.white()
+        self.view.backgroundColor = UIColor.white
         addContentView()
         addNavigationBarButton()
     }
 
     @objc private func confirmButtonAction() {
-        UIApplication.shared().keyWindow?.endEditing(true)
+        UIApplication.shared.keyWindow?.endEditing(true)
         let name = JXdeleteSpaceOnBothEnds(string: itemNameTextField.text)
         let password = JXdeleteSpaceOnBothEnds(string: itemPasswordTextField.text)
         if name == "" {
@@ -41,7 +41,7 @@ class JXAddItemViewController: UIViewController, UITextFieldDelegate {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        UIApplication.shared().keyWindow?.endEditing(true)
+        UIApplication.shared.keyWindow?.endEditing(true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -53,11 +53,8 @@ class JXAddItemViewController: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-}
-
-//MARK: - UI
-extension JXAddItemViewController {
     
+//MARK: - UI
     private func addContentView() {
         let itemNameLabel = UILabel.convenient(title: "项目名称：", titleColor: UIColor.color(withHexString: "#222222"), font: 16, tag: nil)
         self.view.addSubview(itemNameLabel)
@@ -101,7 +98,7 @@ extension JXAddItemViewController {
     }
     
     private func addNavigationBarButton() {
-        let confirmButton = UIButton.convenient(title: "确定", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 18, action: #selector(confirmButtonAction), target: self, tag: nil)
+        let confirmButton = UIButton.convenient(title: "确定", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 18, action: #selector(confirmButtonAction), target: self, tag: nil)
         confirmButton.sizeToFit()
         let confirmItem = UIBarButtonItem(customView: confirmButton)
         self.navigationItem.rightBarButtonItem = confirmItem

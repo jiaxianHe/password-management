@@ -19,7 +19,7 @@ class JXPasswordSpaceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "密码空间"
-        self.view.backgroundColor = UIColor.white()
+        self.view.backgroundColor = UIColor.white
         addItmeView()
         addButtons()
     }
@@ -53,7 +53,7 @@ class JXPasswordSpaceViewController: UIViewController {
                 self!.navigationController!.popToRootViewController(animated: true)
             }), UIAlertAction(title: "保存并复制", style: .default, handler: { [weak self] (action) in
                 self!.save(password: password, selector: selectorArray[tag])
-                let pasteboard = UIPasteboard.general()
+                let pasteboard = UIPasteboard.general
                 pasteboard.string = password
                 self!.navigationController!.popToRootViewController(animated: true)
             }), UIAlertAction(title: "取消", style: .cancel, handler: nil))
@@ -78,11 +78,8 @@ class JXPasswordSpaceViewController: UIViewController {
             JXAppDelegate.saveData()
         }
     }
-
-}
-
-extension JXPasswordSpaceViewController {
     
+//MARK: - UI
     private func addItmeView() {
         let itemLabel = UILabel.convenient(title: "项目名称：" + JXitemName, titleColor: UIColor.color(withHexString: "#222222"), font: 16, tag: nil)
         self.view.addSubview(itemLabel)
@@ -106,7 +103,7 @@ extension JXPasswordSpaceViewController {
     private func addButtons() {
         let titleArray = ["东邪", "西毒", "南帝", "北丐", "中神通", "周伯通"]
         for index in 0 ..< 6 {
-            let button = UIButton.convenient(title: titleArray[index], normalColor: UIColor.red(), highlightedColor: UIColor.blue(), font: 20, action: #selector(buttonAction), target: self, tag: 2000 + index)
+            let button = UIButton.convenient(title: titleArray[index], normalColor: UIColor.red, highlightedColor: UIColor.blue, font: 20, action: #selector(buttonAction), target: self, tag: 2000 + index)
             button.fillet(cornerRadius: 5, borderWidth: onePixel, borderColor: UIColor.color(withHexString: "#666666"))
             self.view.addSubview(button)
             button.layout { [weak self] in
@@ -117,4 +114,5 @@ extension JXPasswordSpaceViewController {
             }
         }
     }
+
 }

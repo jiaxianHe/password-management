@@ -17,7 +17,7 @@ func debugLog<T>(_ message: T, file: String = #file, method: String = #function,
 
 //MARK: - 大图片用的方法
 func JXimagePathWithName(_ name : String) -> UIImage? {
-    guard let path = Bundle.main.pathForResource(name, ofType: "png") else {
+    guard let path = Bundle.main.path(forResource: name, ofType: "png") else {
         return nil
     }
     return UIImage(contentsOfFile: path)
@@ -30,7 +30,7 @@ func JXdeleteSpaceOnBothEnds(string: String?) -> String {
     }
     let regTags = "^ *| *$"
     do {
-        let regex = try RegularExpression(pattern: regTags, options: [.caseInsensitive])
+        let regex = try NSRegularExpression(pattern: regTags, options: [.caseInsensitive])
         let matches = regex.matches(in: _string, options: [.reportProgress], range: NSMakeRange(0, _string.characters.count))
         for result in matches.reversed() {
             guard result.range.length != 0 else {
@@ -52,7 +52,7 @@ class JXDateFormatter: Foundation.DateFormatter {
     static let sharedDateFormatter = DateFormatter()
     private override init() {
         super.init()
-        self.locale = Locale(localeIdentifier: "zh_CN")
+        self.locale = Locale(identifier: "zh_CN")
         self.dateFormat = "yyyy-MM-dd HH:mm:ss"
     }
     
@@ -65,7 +65,7 @@ extension UIColor {
     class func color(withHexString string: String, alpha: CGFloat) -> UIColor {
         var cString = string.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines).uppercased()
         guard cString.characters.count >= 6 else {
-            return UIColor.clear()
+            return UIColor.clear
         }
         if cString.hasPrefix("0X") {
             cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 2))
@@ -74,7 +74,7 @@ extension UIColor {
             cString = cString.substring(from: cString.index(cString.startIndex, offsetBy: 1))
         }
         guard cString.characters.count == 6 else {
-            return UIColor.clear()
+            return UIColor.clear
         }
 
         var range = cString.index(cString.startIndex, offsetBy: 0) ..< cString.index(cString.startIndex, offsetBy: 2)

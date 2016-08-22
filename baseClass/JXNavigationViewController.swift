@@ -18,7 +18,7 @@ class JXNavigationViewController: UINavigationController {
         // Do any additional setup after loading the view.
     }
 
-    override func preferredStatusBarStyle() -> UIStatusBarStyle {
+    override var preferredStatusBarStyle: UIStatusBarStyle {
         return statusBarStyle
     }
 

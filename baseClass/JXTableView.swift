@@ -28,7 +28,7 @@ class JXTableView: UITableView {
     }
     
     deinit {
-        let className = NSStringFromClass(self.dynamicType)
+        let className = NSStringFromClass(type(of: self))
         debugLog("deinit------" + className)
     }
 

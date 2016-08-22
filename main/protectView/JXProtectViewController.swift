@@ -32,7 +32,7 @@ class JXProtectViewController: UIViewController {
                     })
                 }
                 else {
-                    if !automate && error?.code == LAError.touchIDNotEnrolled.rawValue {
+                    if !automate && error?._code == LAError.touchIDNotEnrolled.rawValue {
                         DispatchQueue.main.async(execute: { 
                             self.showAlertViewWith(title:"未开启系统Touch ID", message: "请先在系统设置-Touch ID与密码中开启", alertAction: UIAlertAction(title: "知道了", style: .default, handler: nil))
                         })
@@ -92,10 +92,7 @@ class JXProtectViewController: UIViewController {
         })
     }
     
-}
-
 //MARK: - UI
-extension JXProtectViewController {
     func addProtectView() {
         protectView.title = JXAppDelegate.isCanUseFingerprint ? "Touch ID 或输入密码" : "输入密码"
         self.view.addSubview(protectView)

@@ -29,12 +29,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     private var _rootViewController = JXNavigationViewController(rootViewController:JXItemViewController())
 
 
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        window = UIWindow(frame: UIScreen.main().bounds)
+    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        window = UIWindow(frame: UIScreen.main.bounds)
         getUserData()
         
         window?.rootViewController = _rootViewController
-        window?.backgroundColor = UIColor.white()
+        window?.backgroundColor = UIColor.white
         window?.makeKeyAndVisible()
         return true
     }
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             UserDefaults.standard.set(NSNumber(value: 1), forKey: "JXisNeedToProtect")
             JXisNeedToProtect = true
         }
-        if let passwordData = keychain.getData(JXkeychainKey), let passwordDic = NSKeyedUnarchiver.unarchiveObject(with: passwordData) {
+        if let passwordData = keychain.getData(JXkeychainKey), let passwordDic = NSKeyedUnarchiver.unarchiveObject(with: passwordData) as? Dictionary<String, Any> {
             JXpasswordRange = (passwordDic[JXpasswordRangeKey]) as! Array<[Int]>
             data = (passwordDic[JXDataKey]) as! Array<[String]>
             JXprotectPassword = (passwordDic[JXprotectPasswordKey]) as! Array<Int>

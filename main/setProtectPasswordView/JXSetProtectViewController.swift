@@ -107,11 +107,8 @@ class JXSetProtectViewController: UIViewController {
             }
         }
     }
-
-}
-
+    
 //MARK: - UI
-extension JXSetProtectViewController {
     func addProtectView() {
         protectView.title = "请输入原密码"
         self.view.addSubview(protectView)
@@ -122,4 +119,5 @@ extension JXSetProtectViewController {
         protectView.cancelButton.addTarget(self, action: #selector(cancelAction), for: .touchUpInside)
         
     }
+
 }

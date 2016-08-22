@@ -54,11 +54,8 @@ class JXItemViewController: UIViewController {
     @objc private func addButtonAction(sender: UIButton) {
         self.navigationController?.pushViewController(JXAddItemViewController(), animated: true)
     }
-
-}
-
+    
 //MARK: - selectAction
-extension JXItemViewController {
     private func showAlertView(didSelectRowAt indexPath: IndexPath) {
         let alertView = UIAlertController(title: "请选择", message: nil, preferredStyle: .alert)
         let singleShowAction = UIAlertAction(title: "显示一个", style: .default) {
@@ -110,12 +107,12 @@ extension JXItemViewController {
     }
     
     private func copyOriginalPasswordAction(didSelectRowAt indexPath: IndexPath) {
-        let pasteboard = UIPasteboard.general()
+        let pasteboard = UIPasteboard.general
         pasteboard.string = JXAppDelegate.data[indexPath[1]][1]
     }
     
     private func copyUserfulPasswordAction(didSelectRowAt indexPath: IndexPath) {
-        let pasteboard = UIPasteboard.general()
+        let pasteboard = UIPasteboard.general
         pasteboard.string = JXAppDelegate.data[indexPath[1]][2]
     }
     
@@ -144,10 +141,8 @@ extension JXItemViewController {
         passwordSpaceViewController.JXrow = indexPath[1]
         self.navigationController?.pushViewController(passwordSpaceViewController, animated: true)
     }
-}
 
 //MARK: - UI
-extension JXItemViewController {
     private func addTableView() {
         itemTableView = JXItemTableView(data:JXAppDelegate.data)
         view.addSubview(itemTableView)
@@ -155,12 +150,12 @@ extension JXItemViewController {
     }
     
     private func addNavigationBarButton() {
-        let menuButton = UIButton.convenient(title: "菜单", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 18, action: #selector(menuButtonAction), target: self, tag: nil)
+        let menuButton = UIButton.convenient(title: "菜单", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 18, action: #selector(menuButtonAction), target: self, tag: nil)
         menuButton.sizeToFit()
         let menuItem = UIBarButtonItem(customView: menuButton)
         self.navigationItem.leftBarButtonItem = menuItem
         
-        let addButton = UIButton.convenient(title: "添加", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 18, action: #selector(addButtonAction), target: self, tag: nil)
+        let addButton = UIButton.convenient(title: "添加", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 18, action: #selector(addButtonAction), target: self, tag: nil)
         addButton.sizeToFit()
         let addItem = UIBarButtonItem(customView: addButton)
         self.navigationItem.rightBarButtonItem = addItem

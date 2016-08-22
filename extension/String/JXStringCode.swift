@@ -13,7 +13,7 @@ extension String {
     var md5: String {
         let strData = JXutf8String()
         let digestLen = Int(CC_MD5_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>(allocatingCapacity: digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         
         CC_MD5(strData.0, strData.1, result)
         
@@ -23,7 +23,7 @@ extension String {
     var sha1: String {
         let strData = JXutf8String()
         let digestLen = Int(CC_SHA1_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>(allocatingCapacity: digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         
         CC_SHA1(strData.0, strData.1, result)
         
@@ -33,7 +33,7 @@ extension String {
     var sha224: String {
         let strData = JXutf8String()
         let digestLen = Int(CC_SHA224_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>(allocatingCapacity: digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         
         CC_SHA224(strData.0, strData.1, result)
         
@@ -43,7 +43,7 @@ extension String {
     var sha256: String {
         let strData = JXutf8String()
         let digestLen = Int(CC_SHA256_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>(allocatingCapacity: digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         
         CC_SHA256(strData.0, strData.1, result)
         
@@ -53,7 +53,7 @@ extension String {
     var sha384: String {
         let strData = JXutf8String()
         let digestLen = Int(CC_SHA384_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>(allocatingCapacity: digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         
         CC_SHA384(strData.0, strData.1, result)
         
@@ -63,7 +63,7 @@ extension String {
     var sha512: String {
         let strData = JXutf8String()
         let digestLen = Int(CC_SHA512_DIGEST_LENGTH)
-        let result = UnsafeMutablePointer<CUnsignedChar>(allocatingCapacity: digestLen)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
         
         CC_SHA512(strData.0, strData.1, result)
         
@@ -82,7 +82,7 @@ extension String {
             hash.appendFormat("%02x", result[i])
         }
         
-        result.deallocateCapacity(digestLen)
+        result.deallocate(capacity: digestLen)
         //项目特殊需要
         return hash.substring(to: 32)
 //        return String(format: hash as String)
@@ -94,7 +94,7 @@ extension NSString {
     
     var ns_md5: NSString {
         let string = self as String
-        return string.md5
+        return string.md5 as NSString
     }
     
     var ns_sha1: NSString {

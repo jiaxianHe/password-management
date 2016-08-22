@@ -90,9 +90,9 @@ public class KeychainSwift {
       
     var query: [String : NSObject] = [
       KeychainSwiftConstants.klass       : kSecClassGenericPassword,
-      KeychainSwiftConstants.attrAccount : prefixedKey,
-      KeychainSwiftConstants.valueData   : value,
-      KeychainSwiftConstants.accessible  : accessible
+      KeychainSwiftConstants.attrAccount : prefixedKey as NSObject,
+      KeychainSwiftConstants.valueData   : value as NSObject,
+      KeychainSwiftConstants.accessible  : accessible as NSObject
     ]
       
     query = addAccessGroupWhenPresent(query)
@@ -159,7 +159,7 @@ public class KeychainSwift {
     
     var query: [String: NSObject] = [
       KeychainSwiftConstants.klass       : kSecClassGenericPassword,
-      KeychainSwiftConstants.attrAccount : prefixedKey,
+      KeychainSwiftConstants.attrAccount : prefixedKey as NSObject,
       KeychainSwiftConstants.returnData  : kCFBooleanTrue,
       KeychainSwiftConstants.matchLimit  : kSecMatchLimitOne
     ]
@@ -170,8 +170,8 @@ public class KeychainSwift {
     
     var result: AnyObject?
     
-    lastResultCode = withUnsafeMutablePointer(&result) {
-      SecItemCopyMatching(query, UnsafeMutablePointer($0))
+    lastResultCode = withUnsafeMutablePointer(to: &result) {
+      SecItemCopyMatching(query as CFDictionary, UnsafeMutablePointer($0))
     }
     
     if lastResultCode == noErr { return result as? Data }
@@ -207,7 +207,7 @@ public class KeychainSwift {
 
     var query: [String: NSObject] = [
       KeychainSwiftConstants.klass       : kSecClassGenericPassword,
-      KeychainSwiftConstants.attrAccount : prefixedKey
+      KeychainSwiftConstants.attrAccount : prefixedKey as NSObject
     ]
     
     query = addAccessGroupWhenPresent(query)
@@ -247,7 +247,7 @@ public class KeychainSwift {
     guard let accessGroup = accessGroup else { return items }
     
     var result: [String: NSObject] = items
-    result[KeychainSwiftConstants.accessGroup] = accessGroup
+    result[KeychainSwiftConstants.accessGroup] = accessGroup as NSString
     return result
   }
   
@@ -264,7 +264,7 @@ public class KeychainSwift {
   func addSynchronizableIfRequired(_ items: [String: NSObject], addingItems: Bool) -> [String: NSObject] {
     if !synchronizable { return items }
     var result: [String: NSObject] = items
-    result[KeychainSwiftConstants.attrSynchronizable] = addingItems == true ? true : kSecAttrSynchronizableAny
+    result[KeychainSwiftConstants.attrSynchronizable] = addingItems == true ? NSNumber(value: 1) : kSecAttrSynchronizableAny as NSString
     return result
   }
 }

@@ -19,7 +19,7 @@ class JXCircleView: UIView {
         self.lineWidth = lineWidth
         self.color = color
         self.mode = mode
-        self.backgroundColor = UIColor.white()
+        self.backgroundColor = UIColor.white
     }
     
     override func draw(_ rect: CGRect) {
@@ -28,13 +28,13 @@ class JXCircleView: UIView {
             _context.setStrokeColor(color.cgColor)
             _context.setFillColor(color.cgColor)
             _context.setLineWidth(lineWidth)
-            _context.addArc(centerX: rect.size.width / 2, y: rect.size.height / 2, radius: rect.size.width / 2 - lineWidth, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: 0)
+            _context.addArc(center: CGPoint(x: rect.size.width / 2, y: rect.size.height / 2), radius: rect.size.width / 2 - lineWidth, startAngle: 0, endAngle: 2 * CGFloat(M_PI), clockwise: true)
             _context.drawPath(using: mode)
         }
     }
     
     deinit {
-        let className = NSStringFromClass(self.dynamicType)
+        let className = NSStringFromClass(type(of: self))
         debugLog("deinit------" + className)
     }
 

@@ -27,10 +27,10 @@ class JXSelectPasswordLenghtView: UIView {
             let label = UILabel.convenient(title: String(index + 1), titleColor: UIColor.color(withHexString: "#222222"), font: 16, tag: 2000 + index, textAlignment: .center)
             label.fillet(cornerRadius: nil, borderWidth: onePixel, borderColor: UIColor.color(withHexString: "#666666"))
             if selected.contains(index) {
-                label.backgroundColor = UIColor.gray()
+                label.backgroundColor = UIColor.gray
             }
             else {
-                label.backgroundColor = UIColor.white()
+                label.backgroundColor = UIColor.white
             }
             self.addSubview(label)
             label.layout { [weak self] in
@@ -72,12 +72,12 @@ class JXSelectPasswordLenghtView: UIView {
             if selected.contains(tag) {
                 selectedStatus = .deselect
                 selected.remove(at: selected.index(of: tag)!)
-                label.backgroundColor = UIColor.white()
+                label.backgroundColor = UIColor.white
             }
             else {
                 selectedStatus = .select
                 selected.append(tag)
-                label.backgroundColor = UIColor.gray()
+                label.backgroundColor = UIColor.gray
             }
         }
         
@@ -96,14 +96,14 @@ class JXSelectPasswordLenghtView: UIView {
                 if !selected.contains(tag) {
                     selected.append(tag)
                     let label = self.viewWithTag(2000 + tag) as! UILabel
-                    label.backgroundColor = UIColor.gray()
+                    label.backgroundColor = UIColor.gray
                 }
             }
             else if selectedStatus == .deselect {
                 if selected.contains(tag) {
                     selected.remove(at: selected.index(of: tag)!)
                     let label = self.viewWithTag(2000 + tag) as! UILabel
-                    label.backgroundColor = UIColor.white()
+                    label.backgroundColor = UIColor.white
                 }
             }
         }
@@ -120,7 +120,7 @@ class JXSelectPasswordLenghtView: UIView {
     }
     
     deinit {
-        let className = NSStringFromClass(self.dynamicType)
+        let className = NSStringFromClass(type(of: self))
         debugLog("deinit------" + className)
     }
 }

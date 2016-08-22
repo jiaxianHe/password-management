@@ -10,13 +10,13 @@ import UIKit
 
 class JXProtectView: UIView {
     
-    let cancelButton = UIButton.convenient(title: "取消", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 16, action: nil, target: nil, tag: nil)
+    let cancelButton = UIButton.convenient(title: "取消", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 16, action: nil, target: nil, tag: nil)
     var fingerprintButton: UIButton?
     var codeNumber: ((UIButton) -> Void)?
     private let numberButtonBackgroundView = UIView()
     private let codeIdentifyBackgroundView = UIView()
     private var centerXConstraint: NSLayoutConstraint!
-    private let titleLabel = UILabel.convenient(title: "", titleColor: UIColor.blue(), font: 16, tag: nil, textAlignment: .center)
+    private let titleLabel = UILabel.convenient(title: "", titleColor: UIColor.blue, font: 16, tag: nil, textAlignment: .center)
     var title: String {
         set {
             titleLabel.text = newValue
@@ -28,7 +28,7 @@ class JXProtectView: UIView {
     
     convenience init(isCanUseFingerprint: Bool) {
         self.init(frame:CGRect.zero)
-        self.backgroundColor = UIColor.white()
+        self.backgroundColor = UIColor.white
         addNumberButton()
         addFingerprintAndCancelButton(isCanUseFingerprint: isCanUseFingerprint)
         addCodeIdentify()
@@ -48,7 +48,7 @@ class JXProtectView: UIView {
         }
         
         if isCanUseFingerprint {
-            fingerprintButton = UIButton.convenient(title: "使用指纹", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 16, action: nil, target: nil, tag: nil)
+            fingerprintButton = UIButton.convenient(title: "使用指纹", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 16, action: nil, target: nil, tag: nil)
             self.addSubview(fingerprintButton!)
             fingerprintButton?.layout {
                 $0.bottomAnchor.constraint(equalTo: $0.superview!.bottomAnchor, constant: -20).activeTrue()
@@ -58,15 +58,9 @@ class JXProtectView: UIView {
         }
     }
     
-    deinit {
-        let className = NSStringFromClass(self.dynamicType)
-        debugLog("deinit------" + className)
-    }
-}
 //MARK: - NumberButton
-extension JXProtectView {
     private func addNumberButton() {
-//        numberButtonBackgroundView.backgroundColor = UIColor.red()
+        //        numberButtonBackgroundView.backgroundColor = UIColor.red()
         self.addSubview(numberButtonBackgroundView)
         numberButtonBackgroundView.layout {
             $0.leftAnchor.constraint(equalTo: $0.superview!.leftAnchor, constant: 20).activeTrue()
@@ -77,7 +71,7 @@ extension JXProtectView {
         
         var tempButton: UIButton?
         for No in 0..<9 {
-            let button = UIButton.convenient(title: String(No + 1), normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 32, action: #selector(codeNumberAction), target: self, tag: 2001 + No)
+            let button = UIButton.convenient(title: String(No + 1), normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 32, action: #selector(codeNumberAction), target: self, tag: 2001 + No)
             numberButtonBackgroundView.addSubview(button)
             button.layout {
                 if No % 3 == 0 {
@@ -107,7 +101,7 @@ extension JXProtectView {
             tempButton = button
         }
         
-        let zeroButton = UIButton.convenient(title: "0", normalColor: UIColor.blue(), highlightedColor: UIColor.gray(), font: 32, action: #selector(codeNumberAction), target: self, tag: 2000)
+        let zeroButton = UIButton.convenient(title: "0", normalColor: UIColor.blue, highlightedColor: UIColor.gray, font: 32, action: #selector(codeNumberAction), target: self, tag: 2000)
         self.addSubview(zeroButton)
         zeroButton.layout { [weak self] in
             $0.topAnchor.constraint(equalTo: self!.numberButtonBackgroundView.bottomAnchor).activeTrue()
@@ -123,11 +117,8 @@ extension JXProtectView {
             _codeNumber(sender)
         }
     }
-}
-
-//MARK: - CodeIdentify
-extension JXProtectView {
     
+//MARK: - CodeIdentify
     private func addCodeIdentify() {
         self.addSubview(codeIdentifyBackgroundView)
         centerXConstraint = codeIdentifyBackgroundView.centerXAnchor.constraint(equalTo: codeIdentifyBackgroundView.superview!.centerXAnchor)
@@ -138,7 +129,7 @@ extension JXProtectView {
         }
         
         for No in 0..<6 {
-            let circleView = JXCircleView(lineWidth: 1, color: UIColor.red(), mode: .stroke)
+            let circleView = JXCircleView(lineWidth: 1, color: UIColor.red, mode: .stroke)
             circleView.tag = 2000 + No
             circleView.frame = CGRect(x: 40 * No, y: 5, width: 10, height: 10)
             codeIdentifyBackgroundView.addSubview(circleView)
@@ -161,11 +152,11 @@ extension JXProtectView {
         }
     }
     
-    func codeIdentifyShake(completion:() -> Void) {
+    func codeIdentifyShake(completion:@escaping () -> Void) {
         UIView.animate(withDuration: 0.05, animations: {
             self.centerXConstraint.constant += 20
             self.codeIdentifyBackgroundView.layoutIfNeeded()
-        }, completion:nil)
+            }, completion:nil)
         UIView.animate(withDuration: 0.1, delay: 0.05, options: [], animations: {
             self.centerXConstraint.constant -= 40
             self.codeIdentifyBackgroundView.layoutIfNeeded()
@@ -180,4 +171,8 @@ extension JXProtectView {
         }
     }
     
+    deinit {
+        let className = NSStringFromClass(type(of: self))
+        debugLog("deinit------" + className)
+    }
 }
